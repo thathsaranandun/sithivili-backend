@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.model.Admin;
 import com.example.demo.model.User;
 import com.example.demo.model.Volunteer;
 import com.example.demo.repos.UserRepository;
@@ -24,6 +25,12 @@ public class AdminController {
     @PostMapping(value = "/new/volunteer")
     public User addVolunteer(@Valid @RequestBody Volunteer user){
         user.setUsertype(USER_TYPE);
+        return users.save(user);
+    }
+
+    @PostMapping(value="/new/admin")
+    public Admin addAdmin(@Valid @RequestBody Admin user){
+        user.setUsertype("Admin");
         return users.save(user);
     }
 }
