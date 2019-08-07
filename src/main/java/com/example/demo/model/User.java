@@ -8,13 +8,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import javax.persistence.*;
 import java.io.Serializable;
 
+import static javax.persistence.GenerationType.TABLE;
+
 @Entity
 @Table(name = "user_account_details")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"secretKey"})
 public class User implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=TABLE)
     private int userid;
 
     private String username;
