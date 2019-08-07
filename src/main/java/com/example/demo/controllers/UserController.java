@@ -7,8 +7,6 @@ import com.example.demo.model.Client;
 import com.example.demo.model.User;
 import com.example.demo.model.Volunteer;
 import com.example.demo.repos.UserRepository;
-import com.google.gson.Gson;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,8 +26,7 @@ public class UserController {
 
     //Get all Users
     @GetMapping(Path.ALL_USERS)
-    public List<User> getUsers()
-    {
+    public List<User> getUsers() {
         return users.findAll();
     }
 
@@ -38,22 +35,22 @@ public class UserController {
     public SignUpResponse createUser(@Valid @RequestBody Client user) {
         String msg;
         user.setUsertype(USER_TYPE);
-        if(user.getMobile()==null || user.getUsername()==null || user.getPassword()==null){
+        if (user.getMobile() == null || user.getUsername() == null || user.getPassword() == null) {
             msg = "Sign Up Failed.Please enter all details.";
-        }else{
+        } else {
             System.out.println("Creating new user...");
             msg = "Registration successful!";
             users.save(user);
         }
-        
-        return new SignUpResponse(user,msg);
+
+        return new SignUpResponse(user, msg);
     }
 
     // Get a Single User
     @GetMapping(Path.USER)
     public User getUserById(@PathVariable(value = "id") int userId) {
         User user = users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
-        System.out.println("Requested user details: "+user.toString());
+        System.out.println("Requested user details: " + user.toString());
         return user;
 
     }
@@ -66,13 +63,13 @@ public class UserController {
         Client user = (Client) users.findById(userId).
                 orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
-        if(userDetails.getUsername()!=null){
+        if (userDetails.getUsername() != null) {
             user.setUsername(userDetails.getUsername());
         }
-        if (userDetails.getPassword()!=null){
+        if (userDetails.getPassword() != null) {
             user.setPassword(userDetails.getPassword());
         }
-        if (userDetails.getMobile()!=null){
+        if (userDetails.getMobile() != null) {
             user.setMobile(userDetails.getMobile());
         }
 
@@ -92,13 +89,13 @@ public class UserController {
     }
 
     @PostMapping(Path.USER_LOGIN)
-    public LoginResponse loginVerification(@Valid @RequestBody User user){
+    public LoginResponse loginVerification(@Valid @RequestBody User user) {
         System.out.println("Getting user list from db...");
         List<User> allUsers = getUsers();
         LoginResponse response = new LoginResponse();
-        for(User selectedUser: allUsers){
+        for (User selectedUser : allUsers) {
             System.out.println("Checking users...");
-            if(selectedUser.getUsername().equals(user.getUsername()) && selectedUser.getPassword().equals(user.getPassword())){
+            if (selectedUser.getUsername().equals(user.getUsername()) && selectedUser.getPassword().equals(user.getPassword())) {
                 System.out.println("Valid login. Sending data...");
                 User dbuser = getUserById(selectedUser.getUserid());
                 response.setUser(dbuser);
@@ -114,12 +111,10 @@ public class UserController {
 
     //Get all Users
     @GetMapping(Path.ALL_VOLUNTEERS)
-    public List<Volunteer> getAllVolunteers()
-    {
+    public List<Volunteer> getAllVolunteers() {
         System.out.println(users.findAllVolunteers());
         return users.findAllVolunteers();
     }
-
 
 
 }
