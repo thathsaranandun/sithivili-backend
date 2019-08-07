@@ -27,14 +27,14 @@ public class UserController {
     UserRepository users;
 
     //Get all Users
-    @GetMapping("/all")
+    @GetMapping(Path.ALL_USERS)
     public List<User> getUsers()
     {
         return users.findAll();
     }
 
     // Create a New User
-    @PostMapping("/user/new")
+    @PostMapping(Path.NEW_USER)
     public SignUpResponse createUser(@Valid @RequestBody Client user) {
         String msg;
         user.setUsertype(USER_TYPE);
@@ -50,7 +50,7 @@ public class UserController {
     }
 
     // Get a Single User
-    @GetMapping("/user/{id}")
+    @GetMapping(Path.USER)
     public User getUserById(@PathVariable(value = "id") int userId) {
         User user = users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
         System.out.println("Requested user details: "+user.toString());
@@ -59,7 +59,7 @@ public class UserController {
     }
 
     // Update User
-    @PutMapping("/user/update/{id}")
+    @PutMapping(Path.UPDATE_USER)
     public User updateUser(@PathVariable(value = "id") int userId,
                            @Valid @RequestBody Client userDetails) {
 
@@ -81,7 +81,7 @@ public class UserController {
     }
 
     // Delete a User
-    @DeleteMapping("/user/delete/{id}")
+    @DeleteMapping(Path.DELETE_USER)
     public ResponseEntity<?> deleteUser(@PathVariable(value = "id") int userId) {
         User user = users.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
@@ -91,7 +91,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
-    @PostMapping("user/login")
+    @PostMapping(Path.USER_LOGIN)
     public LoginResponse loginVerification(@Valid @RequestBody User user){
         System.out.println("Getting user list from db...");
         List<User> allUsers = getUsers();
@@ -113,7 +113,7 @@ public class UserController {
     }
 
     //Get all Users
-    @GetMapping("/volunteers/all")
+    @GetMapping(Path.ALL_VOLUNTEERS)
     public List<Volunteer> getAllVolunteers()
     {
         System.out.println(users.findAllVolunteers());

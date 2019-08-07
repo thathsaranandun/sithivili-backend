@@ -22,13 +22,13 @@ public class AdminController {
     UserRepository users;
 
     //Create new volunteer
-    @PostMapping(value = "/new/volunteer")
+    @PostMapping(value = Path.NEW_VOLUNTEER)
     public User addVolunteer(@Valid @RequestBody Volunteer user){
         user.setUsertype(USER_TYPE);
         return users.save(user);
     }
 
-    @PostMapping(value="/new/admin")
+    @PostMapping(value=Path.NEW_ADMIN)
     public Admin addAdmin(@Valid @RequestBody Admin user){
         user.setUsertype("Admin");
         return users.save(user);
