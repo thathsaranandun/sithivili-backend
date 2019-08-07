@@ -36,10 +36,17 @@ public class UserController {
     // Create a New User
     @PostMapping("/user/new")
     public SignUpResponse createUser(@Valid @RequestBody Client user) {
+        String msg;
         user.setUsertype(USER_TYPE);
-        System.out.println("Creating new user...");
-        users.save(user);
-        return new SignUpResponse(user,"Registration successful!");
+        if(user.getMobile()==null || user.getUsername()==null || user.getPassword()==null){
+            msg = "Sign Up Failed.Please enter all details.";
+        }else{
+            System.out.println("Creating new user...");
+            msg = "Registration successful!";
+            users.save(user);
+        }
+        
+        return new SignUpResponse(user,msg);
     }
 
     // Get a Single User
