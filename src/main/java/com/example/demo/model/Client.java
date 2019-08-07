@@ -7,7 +7,6 @@ import javax.persistence.EntityListeners;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user_account_details")
 @EntityListeners(AuditingEntityListener.class)
 public class Client extends User {
     private String mobile;
