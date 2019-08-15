@@ -16,7 +16,8 @@ import javax.validation.Valid;
 @RequestMapping(value = "/api/admin")
 public class AdminController {
 
-    private final String USER_TYPE = "Volunteer";
+    private final String USER_TYPE_VOL = "Volunteer";
+    private final String USER_TYPE_ADMIN = "Admin";
 
     @Autowired
     UserRepository users;
@@ -24,14 +25,30 @@ public class AdminController {
     //Create new volunteer
     @PostMapping(value = Path.NEW_VOLUNTEER)
     public User addVolunteer(@Valid @RequestBody Volunteer user){
-        user.setUsertype(USER_TYPE);
-        return users.save(user);
+        Volunteer existingVolunteer = (Volunteer) users.findVolunteerByName(user.getUsername());
+        System.out.println(existingVolunteer);
+        if(existingVolunteer==null){
+            System.out.println("Adding new volunteer...");
+            user.setUsertype(USER_TYPE_VOL);
+            users.save(user);
+        }else {
+            System.out.println("Username already exists.");
+        }
+        return user;
     }
 
     //Create new admin user
     @PostMapping(value=Path.NEW_ADMIN)
     public Admin addAdmin(@Valid @RequestBody Admin user){
-        user.setUsertype("Admin");
-        return users.save(user);
+        Admin existingUser = (Admin) users.findAdminByName(user.getUsername());
+        System.out.println(existingUser);
+        if(existingUser==null){
+            System.out.println("Creating new admin...");
+            user.setUsertype(USER_TYPE_ADMIN);
+            users.save(user);
+        }else {
+            System.out.println("Username already exists.");
+        }
+        return user;
     }
 }

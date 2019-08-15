@@ -35,9 +35,9 @@ public class UserController {
     public SignUpResponse createUser(@Valid @RequestBody Client user) {
         String msg;
         user.setUsertype(USER_TYPE);
-        System.out.println(user.getMobile()+user.getUsername()+user.getPassword()+"toString"+user.toString());
+        System.out.println("User details received: "+user.toString());
         if (user.getMobile().equals("") || user.getUsername().equals("") || user.getPassword().equals("")) {
-            msg = "Sign Up Failed.Please enter all details.";
+            msg = "Sign Up Failed. Please enter all details.";
         } else {
             Client existingUser = (Client) users.findClientByName(user.getUsername());
             System.out.println(existingUser);
