@@ -28,6 +28,7 @@ public class AdminController {
         return users.save(user);
     }
 
+    //Create new admin user
     @PostMapping(value=Path.NEW_ADMIN)
     public Admin addAdmin(@Valid @RequestBody Admin user){
         user.setUsertype("Admin");
