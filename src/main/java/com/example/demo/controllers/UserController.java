@@ -35,24 +35,24 @@ public class UserController {
     public SignUpResponse createUser(@Valid @RequestBody Client user) {
         String msg;
         user.setUsertype(USER_TYPE);
-        System.out.println("User details received: "+user.toString());
+        System.out.println("User details received: " + user.toString());
         if (user.getMobile().equals("") || user.getUsername().equals("") || user.getPassword().equals("")) {
             msg = "Sign Up Failed. Please enter all details.";
         } else {
             Client existingUser = (Client) users.findClientByName(user.getUsername());
             System.out.println(existingUser);
-            if(existingUser==null){
+            if (existingUser == null) { //Success instance
                 System.out.println("Creating new user...");
                 msg = "Registration successful!";
                 users.save(user);
-            }else {
+            } else {
                 msg = "Username already in use. Please use a different username";
                 System.out.println("Username already exists.");
             }
 
         }
 
-        return new SignUpResponse(user, msg);
+        return new SignUpResponse(null, msg);
     }
 
     // Get a Single User

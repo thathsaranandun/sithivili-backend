@@ -27,7 +27,7 @@ public class AdminController {
     public User addVolunteer(@Valid @RequestBody Volunteer user){
         Volunteer existingVolunteer = (Volunteer) users.findVolunteerByName(user.getUsername());
         System.out.println(existingVolunteer);
-        if(existingVolunteer==null){
+        if(existingVolunteer==null){ //Success instance
             System.out.println("Adding new volunteer...");
             user.setUsertype(USER_TYPE_VOL);
             users.save(user);
@@ -42,7 +42,7 @@ public class AdminController {
     public Admin addAdmin(@Valid @RequestBody Admin user){
         Admin existingUser = (Admin) users.findAdminByName(user.getUsername());
         System.out.println(existingUser);
-        if(existingUser==null){
+        if(existingUser==null){ //Success instance
             System.out.println("Creating new admin...");
             user.setUsertype(USER_TYPE_ADMIN);
             users.save(user);
