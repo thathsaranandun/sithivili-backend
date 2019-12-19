@@ -27,4 +27,7 @@ public interface Path {
 
     //Create a new admin user
     String NEW_ADMIN = "/new/admin";
+
+    //Get user by id
+    String VOLUNTEER = "/volunteer/{id}";
 }

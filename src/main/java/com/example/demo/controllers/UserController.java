@@ -125,5 +125,14 @@ public class UserController {
         return users.findAllVolunteers();
     }
 
+    // Get a Single User
+    @GetMapping(Path.VOLUNTEER)
+    public Volunteer getVolunteerById(@PathVariable(value = "id") int userId) {
+        Volunteer volunteer = (Volunteer) users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("Volunteer", "id", userId));
+        System.out.println("Requested volunteer details: " + volunteer.toString());
+        return volunteer;
+
+    }
+
 
 }
