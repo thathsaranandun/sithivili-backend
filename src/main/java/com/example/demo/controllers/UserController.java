@@ -102,8 +102,8 @@ public class UserController {
         System.out.println("Getting user list from db...");
         List<User> allUsers = getUsers();
         LoginResponse response = new LoginResponse();
+        System.out.println("Checking users...");
         for (User selectedUser : allUsers) {
-            System.out.println("Checking users...");
             if (selectedUser.getUsername().equals(user.getUsername()) && selectedUser.getPassword().equals(user.getPassword())) {
                 System.out.println("Valid login. Sending data...");
                 User dbuser = getUserById(selectedUser.getUserid());
