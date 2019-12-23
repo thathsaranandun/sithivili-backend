@@ -18,7 +18,8 @@ public class AdminController {
 
     private final String USER_TYPE_VOL = "Volunteer";
     private final String USER_TYPE_ADMIN = "Admin";
-
+    private final String MALE_VOLUNTEER_IMG = "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-512.png";
+    private final String FEMALE_VOLUNTEER_IMG = "https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/4_avatar-512.png";
     @Autowired
     UserRepository users;
 
@@ -30,6 +31,11 @@ public class AdminController {
         if(existingVolunteer==null){ //Success instance
             System.out.println("Adding new volunteer...");
             user.setUsertype(USER_TYPE_VOL);
+            if("male".equals(user.getGender())){
+                user.setImage(MALE_VOLUNTEER_IMG);
+            }else {
+                user.setImage(FEMALE_VOLUNTEER_IMG);
+            }
             users.save(user);
         }else {
             System.out.println("Username already exists.");

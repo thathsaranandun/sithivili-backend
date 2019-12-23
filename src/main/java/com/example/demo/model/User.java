@@ -22,6 +22,7 @@ public class User implements Serializable {
     private String username;
     private String password;
     private String usertype;
+    private String image;
 
     @Transient
     private final String SECRET_KEY = "sthvl@sk";
@@ -62,13 +63,22 @@ public class User implements Serializable {
         this.usertype = usertype;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
         return String.format(
                 "{" +
                         "\"id\"=%d," +
                         "\"username\"=\"%s\"," +
-                        "\"password\"=\"%s\"}",
-                userid, username, password);
+                        "\"password\"=\"%s\"," +
+                        "\"image\"=\"%s\"}",
+                userid, username, password, image);
     }
 }
