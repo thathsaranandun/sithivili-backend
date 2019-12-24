@@ -8,6 +8,8 @@ import com.example.demo.model.Client;
 import com.example.demo.model.User;
 import com.example.demo.model.Volunteer;
 import com.example.demo.repos.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -27,6 +29,7 @@ public class UserController {
     @Autowired
     UserRepository users;
 
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     //Get all Users
     @GetMapping(Path.ALL_USERS)
@@ -43,19 +46,19 @@ public class UserController {
         authorizationHelper.authorizeHeader(headers);
         String msg;
         user.setUsertype(USER_TYPE);
-        System.out.println("User details received: " + user.toString());
+        logger.info("User details received: {} ", user.toString());
         if (user.getMobile().equals("") || user.getUsername().equals("") || user.getPassword().equals("")) {
             msg = "Sign Up Failed. Please enter all details.";
         } else {
             Client existingUser = (Client) users.findClientByName(user.getUsername());
-            System.out.println(existingUser);
+            logger.info("Username already exist? {}",existingUser != null);
             if (existingUser == null) { //Success instance
-                System.out.println("Creating new user...");
+                logger.info("Creating new user...");
                 msg = "Registration successful!";
                 users.save(user);
             } else {
                 msg = "Username already in use. Please use a different username";
-                System.out.println("Username already exists.");
+                logger.info("Username already exists.");
             }
 
         }
@@ -69,7 +72,7 @@ public class UserController {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
         authorizationHelper.authorizeHeader(headers);
         User user = users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
-        System.out.println("Requested user details: " + user.toString());
+        logger.info("Requested user details: {}", user.toString());
         return user;
 
     }
@@ -82,19 +85,16 @@ public class UserController {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
         authorizationHelper.authorizeHeader(headers);
 
-        System.out.println(userId);
-        System.out.println("Recieved update request");
-        System.out.println(userDetails.getUsername());
+        logger.info("Received update request for user {}",userId);
         Client user = (Client) users.findById(userId).
                 orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
-        System.out.println(user.getUsername());
         if (userDetails.getUsername() != null) {
-            System.out.println("Updated username");
+            logger.info("Updated username");
             user.setUsername(userDetails.getUsername());
         }
         if (userDetails.getPassword() != null) {
-            System.out.println("Updated password");
+            logger.info("Updated password");
             user.setPassword(userDetails.getPassword());
         }
         if (userDetails.getMobile() != null) {
@@ -123,13 +123,12 @@ public class UserController {
     public LoginResponse loginVerification(@Valid @RequestBody User user,@RequestHeader Map<String, String> headers) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
         authorizationHelper.authorizeHeader(headers);
-        System.out.println("Getting user list from db...");
+        logger.info("Logging request received");
         List<User> allUsers = users.findAll();
         LoginResponse response = new LoginResponse();
-        System.out.println("Checking users...");
         for (User selectedUser : allUsers) {
             if (selectedUser.getUsername().equals(user.getUsername()) && selectedUser.getPassword().equals(user.getPassword())) {
-                System.out.println("Valid login. Sending data...");
+                logger.info("Valid login. Sending data...");
                 User dbuser = users.findById(selectedUser.getUserid()).orElseThrow(() -> new ResourceNotFoundException("User", "id", selectedUser.getUserid()));
                 response.setUser(dbuser);
                 response.getUser().setPassword(null);
@@ -138,7 +137,7 @@ public class UserController {
 
             }
         }
-        System.out.println("Invalid user details...");
+        logger.info("Invalid user details...");
         return response;
     }
 
@@ -156,7 +155,6 @@ public class UserController {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
         authorizationHelper.authorizeHeader(headers);
         Volunteer volunteer = (Volunteer) users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("Volunteer", "id", userId));
-        System.out.println("Requested volunteer details: " + volunteer.toString());
         return volunteer;
 
     }
