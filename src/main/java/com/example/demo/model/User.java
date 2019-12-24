@@ -37,6 +37,10 @@ public class User implements Serializable {
     }
 
     public String getPassword() {
+        return password;
+    }
+
+    public String getRealPassword() {
         if(password!=null) {
             return AES.decrypt(password, SECRET_KEY);
         }
