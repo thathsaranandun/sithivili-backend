@@ -31,7 +31,12 @@ public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
-    //Get all Users
+
+    /**
+     * Get all Users
+     * @param authorization
+     * @return List of users
+     */
     @GetMapping(Path.ALL_USERS)
     public List<User> getUsers(@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
@@ -39,7 +44,14 @@ public class UserController {
         return users.findAll();
     }
 
-    // Create a New User
+
+
+    /**
+     * Create a New User
+     * @param user
+     * @param authorization
+     * @return SignUpResponse
+     */
     @PostMapping(Path.NEW_USER)
     public SignUpResponse createUser(@Valid @RequestBody Client user,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
@@ -66,7 +78,12 @@ public class UserController {
         return new SignUpResponse(user, msg);
     }
 
-    // Get a Single User
+    /**
+     * Get a Single User
+     * @param userId
+     * @param authorization
+     * @return User
+     */
     @GetMapping(Path.USER)
     public User getUserById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
@@ -77,7 +94,13 @@ public class UserController {
 
     }
 
-    // Update User
+    /**
+     * Update User
+     * @param userId
+     * @param userDetails
+     * @param authorization
+     * @return User
+     */
     @PutMapping(path = Path.UPDATE_USER,consumes={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE} )
     public User updateUser(@PathVariable(value = "id") int userId,
@@ -105,7 +128,13 @@ public class UserController {
         return updatedUser;
     }
 
-    // Delete a User
+
+    /**
+     * Delete a User
+     * @param userId
+     * @param authorization
+     * @return ResponseEntity
+     */
     @DeleteMapping(Path.DELETE_USER)
     public ResponseEntity<?> deleteUser(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
@@ -119,6 +148,12 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
+    /**
+     * User Login
+     * @param user
+     * @param authorization
+     * @return LoginResponse
+     */
     @PostMapping(Path.USER_LOGIN)
     public LoginResponse loginVerification(@Valid @RequestBody User user,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
@@ -141,7 +176,11 @@ public class UserController {
         return response;
     }
 
-    //Get all Users
+    /**
+     * Get all Users
+     * @param authorization
+     * @return
+     */
     @GetMapping(Path.ALL_VOLUNTEERS)
     public List<Volunteer> getAllVolunteers(@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
@@ -149,7 +188,12 @@ public class UserController {
         return users.findAllVolunteers();
     }
 
-    // Get a Single User
+    /**
+     * Get a Single User
+     * @param userId
+     * @param authorization
+     * @return
+     */
     @GetMapping(Path.VOLUNTEER)
     public Volunteer getVolunteerById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();

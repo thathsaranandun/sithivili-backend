@@ -7,8 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class HomeController {
 
+    /**
+     * Test server status
+     * @return
+     */
     @RequestMapping("")
     public String home(){
-        return "Sithivili sb server";
+        return "Sithivili Server status - running";
     }
 }

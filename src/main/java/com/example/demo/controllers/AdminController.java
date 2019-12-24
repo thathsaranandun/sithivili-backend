@@ -23,7 +23,12 @@ public class AdminController {
     @Autowired
     UserRepository users;
 
-    //Create new volunteer
+
+    /**
+     * Create new volunteer
+     * @param user
+     * @return User
+     */
     @PostMapping(value = Path.NEW_VOLUNTEER)
     public User addVolunteer(@Valid @RequestBody Volunteer user){
         Volunteer existingVolunteer = (Volunteer) users.findVolunteerByName(user.getUsername());
@@ -43,7 +48,11 @@ public class AdminController {
         return user;
     }
 
-    //Create new admin user
+    /**
+     * Create new admin user
+     * @param user
+     * @return Admin
+     */
     @PostMapping(value=Path.NEW_ADMIN)
     public Admin addAdmin(@Valid @RequestBody Admin user){
         Admin existingUser = (Admin) users.findAdminByName(user.getUsername());
