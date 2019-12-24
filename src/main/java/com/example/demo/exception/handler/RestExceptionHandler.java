@@ -1,6 +1,7 @@
 package com.example.demo.exception.handler;
 
 import com.example.demo.exception.UnauthorizedException;
+import com.example.demo.exception.handler.errors.APIError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;

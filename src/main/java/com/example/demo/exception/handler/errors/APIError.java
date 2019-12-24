@@ -1,4 +1,4 @@
-package com.example.demo.exception.handler;
+package com.example.demo.exception.handler.errors;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import org.hibernate.validator.internal.engine.path.PathImpl;
