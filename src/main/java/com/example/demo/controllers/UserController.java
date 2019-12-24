@@ -33,17 +33,17 @@ public class UserController {
 
     //Get all Users
     @GetMapping(Path.ALL_USERS)
-    public List<User> getUsers(@RequestHeader Map<String, String> headers) {
+    public List<User> getUsers(@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(headers);
+        authorizationHelper.authorizeHeader(authorization);
         return users.findAll();
     }
 
     // Create a New User
     @PostMapping(Path.NEW_USER)
-    public SignUpResponse createUser(@Valid @RequestBody Client user,@RequestHeader Map<String, String> headers) {
+    public SignUpResponse createUser(@Valid @RequestBody Client user,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(headers);
+        authorizationHelper.authorizeHeader(authorization);
         String msg;
         user.setUsertype(USER_TYPE);
         logger.info("User details received: {} ", user.toString());
@@ -68,9 +68,9 @@ public class UserController {
 
     // Get a Single User
     @GetMapping(Path.USER)
-    public User getUserById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> headers) {
+    public User getUserById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(headers);
+        authorizationHelper.authorizeHeader(authorization);
         User user = users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
         logger.info("Requested user details: {}", user.toString());
         return user;
@@ -81,9 +81,9 @@ public class UserController {
     @PutMapping(path = Path.UPDATE_USER,consumes={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE} )
     public User updateUser(@PathVariable(value = "id") int userId,
-                           @Valid @RequestBody Client userDetails,@RequestHeader Map<String, String> headers) {
+                           @Valid @RequestBody Client userDetails,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(headers);
+        authorizationHelper.authorizeHeader(authorization);
 
         logger.info("Received update request for user {}",userId);
         Client user = (Client) users.findById(userId).
@@ -107,9 +107,9 @@ public class UserController {
 
     // Delete a User
     @DeleteMapping(Path.DELETE_USER)
-    public ResponseEntity<?> deleteUser(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> headers) {
+    public ResponseEntity<?> deleteUser(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(headers);
+        authorizationHelper.authorizeHeader(authorization);
 
         User user = users.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
@@ -120,9 +120,9 @@ public class UserController {
     }
 
     @PostMapping(Path.USER_LOGIN)
-    public LoginResponse loginVerification(@Valid @RequestBody User user,@RequestHeader Map<String, String> headers) {
+    public LoginResponse loginVerification(@Valid @RequestBody User user,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(headers);
+        authorizationHelper.authorizeHeader(authorization);
         logger.info("Logging request received");
         List<User> allUsers = users.findAll();
         LoginResponse response = new LoginResponse();
@@ -143,17 +143,17 @@ public class UserController {
 
     //Get all Users
     @GetMapping(Path.ALL_VOLUNTEERS)
-    public List<Volunteer> getAllVolunteers(@RequestHeader Map<String, String> headers) {
+    public List<Volunteer> getAllVolunteers(@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(headers);
+        authorizationHelper.authorizeHeader(authorization);
         return users.findAllVolunteers();
     }
 
     // Get a Single User
     @GetMapping(Path.VOLUNTEER)
-    public Volunteer getVolunteerById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> headers) {
+    public Volunteer getVolunteerById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(headers);
+        authorizationHelper.authorizeHeader(authorization);
         Volunteer volunteer = (Volunteer) users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("Volunteer", "id", userId));
         return volunteer;
 
