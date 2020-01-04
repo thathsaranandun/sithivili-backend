@@ -14,9 +14,9 @@ public class HomeController {
      * @return
      */
     @RequestMapping("/")
-    public ResponseEntity<?> home(){
+    public String home(){
 
-        return ResponseEntity.ok().build();
+        return "Server Up and Running";
     }
 
 }
