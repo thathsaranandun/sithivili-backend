@@ -7,6 +7,3 @@ handlers:
   script: this field is required, but ignored
 manual_scaling:
   instances: 1
-endpoints_api_service:
-  name: sithivili.appspot.com
-  rollout_strategy: managed
