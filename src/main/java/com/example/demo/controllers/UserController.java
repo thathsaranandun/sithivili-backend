@@ -62,7 +62,7 @@ public class UserController {
         if (user.getMobile().equals("") || user.getUsername().equals("") || user.getPassword().equals("")) {
             msg = "Sign Up Failed. Please enter all details.";
         } else {
-            Client existingUser = (Client) users.findClientByName(user.getUsername());
+            Client existingUser = (Client) users.findByUsernameAndUsertype(user.getUsername(),USER_TYPE);
             logger.info("Username already exist? {}",existingUser != null);
             if (existingUser == null) { //Success instance
                 logger.info("Creating new user...");
@@ -185,7 +185,7 @@ public class UserController {
     public List<Volunteer> getAllVolunteers(@RequestHeader Map<String, String> authorization) {
         AuthorizationHelper authorizationHelper = new AuthorizationHelper();
         authorizationHelper.authorizeHeader(authorization);
-        return users.findAllVolunteers();
+        return users.findAllByUsertype("Volunteer");
     }
 
     /**

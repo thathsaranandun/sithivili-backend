@@ -31,7 +31,7 @@ public class AdminController {
      */
     @PostMapping(value = Path.NEW_VOLUNTEER)
     public User addVolunteer(@Valid @RequestBody Volunteer user){
-        Volunteer existingVolunteer = (Volunteer) users.findVolunteerByName(user.getUsername());
+        Volunteer existingVolunteer = (Volunteer) users.findByUsernameAndUsertype(user.getUsername(),USER_TYPE_VOL);
         System.out.println(existingVolunteer);
         if(existingVolunteer==null){ //Success instance
             System.out.println("Adding new volunteer...");
@@ -55,7 +55,7 @@ public class AdminController {
      */
     @PostMapping(value=Path.NEW_ADMIN)
     public Admin addAdmin(@Valid @RequestBody Admin user){
-        Admin existingUser = (Admin) users.findAdminByName(user.getUsername());
+        Admin existingUser = (Admin) users.findByUsernameAndUsertype(user.getUsername(),USER_TYPE_ADMIN);
         System.out.println(existingUser);
         if(existingUser==null){ //Success instance
             System.out.println("Creating new admin...");

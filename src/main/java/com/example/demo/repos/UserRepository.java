@@ -13,15 +13,10 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer> {
 
-    @Query("select u from User u where u.usertype = 'Volunteer'")
-    List<Volunteer> findAllVolunteers();
+    List<Volunteer> findAllByUsertype(String userType);
 
-    @Query("select u from User u where u.username = :username")
-    Client findClientByName(String username);
+    User findByUsernameAndUsertype(String username,String usertype);
 
-    @Query("select u from User u where u.username = :username")
-    Volunteer findVolunteerByName(String username);
 
-    @Query("select u from User u where u.username = :username")
-    Admin findAdminByName(String username);
+
 }
