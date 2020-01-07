@@ -30,4 +30,10 @@ public interface Path {
 
     //Get user by id
     String VOLUNTEER = "/volunteer/{id}";
+
+    //Get all locations
+    String LOCATIONS = "/location/all";
+
+    //New location
+    String NEW_LOCATION = "/location/new";
 }
