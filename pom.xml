@@ -11,7 +11,7 @@
     <groupId>com.skepseis</groupId>
     <artifactId>sithivili</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <description>Demo project for Spring Boot</description>
+    <description>Sithivili WS</description>
 
     <properties>
         <java.version>1.8</java.version>

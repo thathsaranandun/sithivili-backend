@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import com.example.demo.AES;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -40,6 +41,7 @@ public class User implements Serializable {
         return password;
     }
 
+    @JsonIgnore
     public String getRealPassword() {
         if(password!=null) {
             return AES.decrypt(password, SECRET_KEY);
