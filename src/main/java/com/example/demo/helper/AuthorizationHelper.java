@@ -18,7 +18,7 @@ public class AuthorizationHelper {
         try{
             headers.forEach((key, value) -> sb.append("  ").append(key).append(" = ").append(value).append("\n") );
             logger.info("\n  Headers\n  -------\n{}", sb.toString());
-            String validate = headers.get("authorization").substring(7);
+            String validate = headers.get("bearer").substring(7);
 
             if(!validate.equals(bearerToken)){
                 throw new UnauthorizedException("Invalid Bearer Token");

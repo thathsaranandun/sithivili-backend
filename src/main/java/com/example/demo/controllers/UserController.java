@@ -1,13 +1,14 @@
 package com.example.demo.controllers;
 
-import com.example.demo.LoginResponse;
-import com.example.demo.SignUpResponse;
+import com.example.demo.response.LoginResponse;
+import com.example.demo.response.SignUpResponse;
 import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.helper.AuthorizationHelper;
 import com.example.demo.model.Client;
 import com.example.demo.model.User;
 import com.example.demo.model.Volunteer;
 import com.example.demo.repos.UserRepository;
+import com.example.demo.security.JwtTokenUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,9 @@ public class UserController {
 
     @Autowired
     UserRepository users;
+
+    @Autowired
+    JwtTokenUtil jwtTokenUtil;
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
@@ -121,6 +125,7 @@ public class UserController {
             user.setPassword(userDetails.getPassword());
         }
         if (userDetails.getMobile() != null) {
+            logger.info("Updated mobile");
             user.setMobile(userDetails.getMobile());
         }
 
@@ -168,6 +173,8 @@ public class UserController {
                 response.setUser(dbuser);
                 response.getUser().setPassword(null);
                 response.setDbdata(true);
+                final String token = jwtTokenUtil.generateToken(user);
+                response.setToken(token);
                 return response;
 
             }
