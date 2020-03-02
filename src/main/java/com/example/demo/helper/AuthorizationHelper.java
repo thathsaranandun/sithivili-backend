@@ -3,9 +3,11 @@ package com.example.demo.helper;
 import com.example.demo.exception.UnauthorizedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import java.util.Map;
 
-
+@Component
 public class AuthorizationHelper {
 
     //Bearer sithivilisbbebt
@@ -18,7 +20,7 @@ public class AuthorizationHelper {
         try{
             headers.forEach((key, value) -> sb.append("  ").append(key).append(" = ").append(value).append("\n") );
             logger.info("\n  Headers\n  -------\n{}", sb.toString());
-            String validate = headers.get("authorization").substring(7);
+            String validate = headers.get("bearer").substring(7);
 
             if(!validate.equals(bearerToken)){
                 throw new UnauthorizedException("Invalid Bearer Token");
