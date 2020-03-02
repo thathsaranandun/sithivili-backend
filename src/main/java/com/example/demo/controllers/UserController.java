@@ -33,18 +33,20 @@ public class UserController {
     @Autowired
     JwtTokenUtil jwtTokenUtil;
 
+    @Autowired
+    AuthorizationHelper authorizationHelper;
+
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
 
     /**
      * Get all Users
-     * @param authorization
+     * @param bearer
      * @return List of users
      */
     @GetMapping(Path.ALL_USERS)
-    public List<User> getUsers(@RequestHeader Map<String, String> authorization) {
-        AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(authorization);
+    public List<User> getUsers(@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
         return users.findAll();
     }
 
@@ -53,13 +55,12 @@ public class UserController {
     /**
      * Create a New User
      * @param user
-     * @param authorization
+     * @param bearer
      * @return SignUpResponse
      */
     @PostMapping(Path.NEW_USER)
-    public SignUpResponse createUser(@Valid @RequestBody Client user,@RequestHeader Map<String, String> authorization) {
-        AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(authorization);
+    public SignUpResponse createUser(@Valid @RequestBody Client user,@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
         String msg;
         user.setUsertype(USER_TYPE);
         logger.info("User details received: {} ", user.toString());
@@ -85,13 +86,12 @@ public class UserController {
     /**
      * Get a Single User
      * @param userId
-     * @param authorization
+     * @param bearer
      * @return User
      */
     @GetMapping(Path.USER)
-    public User getUserById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
-        AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(authorization);
+    public User getUserById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
         User user = users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
         logger.info("Requested user details: {}", user.toString());
         return user;
@@ -102,15 +102,14 @@ public class UserController {
      * Update User
      * @param userId
      * @param userDetails
-     * @param authorization
+     * @param bearer
      * @return User
      */
     @PutMapping(path = Path.UPDATE_USER,consumes={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE} )
     public User updateUser(@PathVariable(value = "id") int userId,
-                           @Valid @RequestBody Client userDetails,@RequestHeader Map<String, String> authorization) {
-        AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(authorization);
+                           @Valid @RequestBody Client userDetails,@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
 
         logger.info("Received update request for user {}",userId);
         Client user = (Client) users.findById(userId).
@@ -137,13 +136,12 @@ public class UserController {
     /**
      * Delete a User
      * @param userId
-     * @param authorization
+     * @param bearer
      * @return ResponseEntity
      */
     @DeleteMapping(Path.DELETE_USER)
-    public ResponseEntity<?> deleteUser(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
-        AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(authorization);
+    public ResponseEntity<?> deleteUser(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
 
         User user = users.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
@@ -156,28 +154,23 @@ public class UserController {
     /**
      * User Login
      * @param user
-     * @param authorization
+     * @param bearer
      * @return LoginResponse
      */
     @PostMapping(Path.USER_LOGIN)
-    public LoginResponse loginVerification(@Valid @RequestBody User user,@RequestHeader Map<String, String> authorization) {
-        AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(authorization);
+    public LoginResponse loginVerification(@Valid @RequestBody User user,@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
         logger.info("Logging request received");
-        List<User> allUsers = users.findAll();
         LoginResponse response = new LoginResponse();
-        for (User selectedUser : allUsers) {
-            if (selectedUser.getUsername().equals(user.getUsername()) && selectedUser.getPassword().equals(user.getPassword())) {
-                logger.info("Valid login. Sending data...");
-                User dbuser = users.findById(selectedUser.getUserid()).orElseThrow(() -> new ResourceNotFoundException("User", "id", selectedUser.getUserid()));
-                response.setUser(dbuser);
-                response.getUser().setPassword(null);
-                response.setDbdata(true);
-                final String token = jwtTokenUtil.generateToken(user);
-                response.setToken(token);
-                return response;
 
-            }
+        User foundUser = users.findByUsernameAndPassword(user.getUsername(),user.getPassword());
+        if(null != foundUser){
+            response.setUser(foundUser);
+            response.getUser().setPassword(null);
+            response.setDbdata(true);
+            final String token = jwtTokenUtil.generateToken(user);
+            response.setToken(token);
+            return response;
         }
         logger.info("Invalid user details...");
         return response;
@@ -185,26 +178,24 @@ public class UserController {
 
     /**
      * Get all Users
-     * @param authorization
+     * @param bearer
      * @return
      */
     @GetMapping(Path.ALL_VOLUNTEERS)
-    public List<Volunteer> getAllVolunteers(@RequestHeader Map<String, String> authorization) {
-        AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(authorization);
+    public List<Volunteer> getAllVolunteers(@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
         return users.findAllByUsertype("Volunteer");
     }
 
     /**
      * Get a Single User
      * @param userId
-     * @param authorization
+     * @param bearer
      * @return
      */
     @GetMapping(Path.VOLUNTEER)
-    public Volunteer getVolunteerById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> authorization) {
-        AuthorizationHelper authorizationHelper = new AuthorizationHelper();
-        authorizationHelper.authorizeHeader(authorization);
+    public Volunteer getVolunteerById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
         Volunteer volunteer = (Volunteer) users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("Volunteer", "id", userId));
         return volunteer;
 

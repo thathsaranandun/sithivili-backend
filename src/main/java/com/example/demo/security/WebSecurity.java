@@ -1,6 +1,7 @@
 package com.example.demo.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,13 +16,14 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import static com.example.demo.security.SecurityConstants.SIGN_UP_URL;
-
 
 @EnableWebSecurity
 public class WebSecurity extends WebSecurityConfigurerAdapter {
     private UserDetailsServiceImpl userDetailsService;
     private BCryptPasswordEncoder bCryptPasswordEncoder;
+
+    @Value("${jwt.enabled}")
+    private boolean isJwtEnabled;
 
     public WebSecurity(UserDetailsServiceImpl userDetailsService, BCryptPasswordEncoder bCryptPasswordEncoder) {
         this.userDetailsService = userDetailsService;
@@ -49,15 +51,18 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable().
-                authorizeRequests()
-                .antMatchers(SecurityConstants.LOGIN_URL,SecurityConstants.SIGN_UP_URL).permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http
-                .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
+        if(isJwtEnabled) {
+            http.cors().and().csrf().disable().
+                    authorizeRequests()
+                    .antMatchers(SecurityConstants.AUTH_WHITELIST).permitAll()
+                    .anyRequest().authenticated()
+                    .and()
+                    .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
+                    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            http
+                    .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
+        }
+
     }
 
     @Override

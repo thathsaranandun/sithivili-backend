@@ -3,9 +3,11 @@ package com.example.demo.helper;
 import com.example.demo.exception.UnauthorizedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+
 import java.util.Map;
 
-
+@Component
 public class AuthorizationHelper {
 
     //Bearer sithivilisbbebt
