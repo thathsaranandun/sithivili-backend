@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import lombok.extern.slf4j.Slf4j;
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.SecretKeyFactory;
@@ -9,6 +11,7 @@ import javax.crypto.spec.SecretKeySpec;
 import java.security.spec.KeySpec;
 import java.util.Base64;
 
+@Slf4j
 public class AES {
 
     private static String secretKey;
@@ -32,7 +35,7 @@ public class AES {
         }
         catch (Exception e)
         {
-            System.out.println("Error while encrypting: " + e.toString());
+            log.error("Error while encrypting: " + e.toString());
         }
         return null;
     }
@@ -53,7 +56,7 @@ public class AES {
             return new String(cipher.doFinal(Base64.getDecoder().decode(strToDecrypt)));
         }
         catch (Exception e) {
-            System.out.println("Error while decrypting: " + e.toString());
+            log.error("Error while decrypting: " + e.toString());
         }
         return null;
     }

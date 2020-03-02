@@ -2,7 +2,8 @@ package com.example.demo.model;
 
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 import javax.persistence.*;
 
 import static javax.persistence.GenerationType.AUTO;
@@ -12,6 +13,7 @@ import static javax.persistence.GenerationType.TABLE;
 @Table(name = "location")
 @EntityListeners(AuditingEntityListener.class)
 public class Location {
+
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
@@ -19,6 +21,11 @@ public class Location {
     private String address;
     private String longitude;
     private String latitude;
+
+    @Override
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
+    }
 
     public int getId() {
         return id;

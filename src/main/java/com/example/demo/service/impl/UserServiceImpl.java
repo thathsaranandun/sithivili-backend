@@ -134,9 +134,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public User registerVolunteer(Volunteer user) {
         Volunteer existingVolunteer = (Volunteer) users.findByUsernameAndUsertype(user.getUsername(),USER_TYPE_VOL);
-        System.out.println(existingVolunteer);
+        log.info("Existing volunteer with username? - {}",existingVolunteer!=null);
         if(existingVolunteer==null){ //Success instance
-            System.out.println("Adding new volunteer...");
+            log.info("Adding new volunteer...");
             user.setUsertype(USER_TYPE_VOL);
             if("male".equals(user.getGender())){
                 user.setImage(MALE_VOLUNTEER_IMG);
@@ -145,7 +145,7 @@ public class UserServiceImpl implements UserService {
             }
             users.save(user);
         }else {
-            System.out.println("Username already exists.");
+            log.error("Username already exists.");
         }
         return user;
     }
@@ -153,13 +153,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public Admin registerAdmin(Admin user) {
         Admin existingUser = (Admin) users.findByUsernameAndUsertype(user.getUsername(),USER_TYPE_ADMIN);
-        System.out.println(existingUser);
+        log.info("Existing admin with username - {}",existingUser!=null);
         if(existingUser==null){ //Success instance
-            System.out.println("Creating new admin...");
+            log.info("Creating new admin...");
             user.setUsertype(USER_TYPE_ADMIN);
             users.save(user);
         }else {
-            System.out.println("Username already exists.");
+            log.error("Username already exists.");
         }
         return user;
     }

@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -79,12 +81,6 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return String.format(
-                "{" +
-                        "\"id\"=%d," +
-                        "\"username\"=\"%s\"," +
-                        "\"password\"=\"%s\"," +
-                        "\"image\"=\"%s\"}",
-                userid, username, password, image);
+        return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
     }
 }
