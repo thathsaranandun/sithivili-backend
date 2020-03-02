@@ -2,13 +2,11 @@ package com.example.demo.controllers;
 
 import com.example.demo.response.LoginResponse;
 import com.example.demo.response.SignUpResponse;
-import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.helper.AuthorizationHelper;
 import com.example.demo.model.Client;
 import com.example.demo.model.User;
 import com.example.demo.model.Volunteer;
-import com.example.demo.repos.UserRepository;
-import com.example.demo.security.JwtTokenUtil;
+import com.example.demo.service.impl.UserServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,18 +23,14 @@ import java.util.Map;
 @RequestMapping("/api/users")
 public class UserController {
 
-    private final String USER_TYPE = "Client";
 
-    @Autowired
-    UserRepository users;
 
-    @Autowired
-    JwtTokenUtil jwtTokenUtil;
 
     @Autowired
     AuthorizationHelper authorizationHelper;
 
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    @Autowired
+    UserServiceImpl userService;
 
 
     /**
@@ -47,7 +41,7 @@ public class UserController {
     @GetMapping(Path.ALL_USERS)
     public List<User> getUsers(@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-        return users.findAll();
+        return userService.getAllUsers();
     }
 
 
@@ -61,26 +55,7 @@ public class UserController {
     @PostMapping(Path.NEW_USER)
     public SignUpResponse createUser(@Valid @RequestBody Client user,@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-        String msg;
-        user.setUsertype(USER_TYPE);
-        logger.info("User details received: {} ", user.toString());
-        if (user.getMobile().equals("") || user.getUsername().equals("") || user.getPassword().equals("")) {
-            msg = "Sign Up Failed. Please enter all details.";
-        } else {
-            Client existingUser = (Client) users.findByUsernameAndUsertype(user.getUsername(),USER_TYPE);
-            logger.info("Username already exist? {}",existingUser != null);
-            if (existingUser == null) { //Success instance
-                logger.info("Creating new user...");
-                msg = "Registration successful!";
-                users.save(user);
-            } else {
-                msg = "Username already in use. Please use a different username";
-                logger.info("Username already exists.");
-            }
-
-        }
-
-        return new SignUpResponse(user, msg);
+        return userService.signUp(user);
     }
 
     /**
@@ -92,9 +67,7 @@ public class UserController {
     @GetMapping(Path.USER)
     public User getUserById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-        User user = users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
-        logger.info("Requested user details: {}", user.toString());
-        return user;
+        return userService.getUser(userId);
 
     }
 
@@ -110,26 +83,7 @@ public class UserController {
     public User updateUser(@PathVariable(value = "id") int userId,
                            @Valid @RequestBody Client userDetails,@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-
-        logger.info("Received update request for user {}",userId);
-        Client user = (Client) users.findById(userId).
-                orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
-
-        if (userDetails.getUsername() != null) {
-            logger.info("Updated username");
-            user.setUsername(userDetails.getUsername());
-        }
-        if (userDetails.getPassword() != null) {
-            logger.info("Updated password");
-            user.setPassword(userDetails.getPassword());
-        }
-        if (userDetails.getMobile() != null) {
-            logger.info("Updated mobile");
-            user.setMobile(userDetails.getMobile());
-        }
-
-        User updatedUser = users.save(user);
-        return updatedUser;
+        return userService.updateUser(userId,userDetails);
     }
 
 
@@ -142,13 +96,7 @@ public class UserController {
     @DeleteMapping(Path.DELETE_USER)
     public ResponseEntity<?> deleteUser(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-
-        User user = users.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
-
-        users.delete(user);
-
-        return ResponseEntity.ok().build();
+        return userService.removeUser(userId);
     }
 
     /**
@@ -160,20 +108,7 @@ public class UserController {
     @PostMapping(Path.USER_LOGIN)
     public LoginResponse loginVerification(@Valid @RequestBody User user,@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-        logger.info("Logging request received");
-        LoginResponse response = new LoginResponse();
-
-        User foundUser = users.findByUsernameAndPassword(user.getUsername(),user.getPassword());
-        if(null != foundUser){
-            response.setUser(foundUser);
-            response.getUser().setPassword(null);
-            response.setDbdata(true);
-            final String token = jwtTokenUtil.generateToken(user);
-            response.setToken(token);
-            return response;
-        }
-        logger.info("Invalid user details...");
-        return response;
+        return userService.login(user);
     }
 
     /**
@@ -184,7 +119,7 @@ public class UserController {
     @GetMapping(Path.ALL_VOLUNTEERS)
     public List<Volunteer> getAllVolunteers(@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-        return users.findAllByUsertype("Volunteer");
+        return userService.getAllVolunteers();
     }
 
     /**
@@ -196,9 +131,7 @@ public class UserController {
     @GetMapping(Path.VOLUNTEER)
     public Volunteer getVolunteerById(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-        Volunteer volunteer = (Volunteer) users.findById(userId).orElseThrow(() -> new ResourceNotFoundException("Volunteer", "id", userId));
-        return volunteer;
-
+        return userService.getVolunteer(userId);
     }
 
 
