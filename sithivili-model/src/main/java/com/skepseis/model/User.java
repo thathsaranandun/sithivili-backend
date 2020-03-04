@@ -4,12 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.skepseis.model.helper.AES;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-<<<<<<< Updated upstream:src/main/java/com/example/demo/model/User.java
-import org.springframework.web.bind.annotation.ModelAttribute;
-=======
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
->>>>>>> Stashed changes:sithivili-model/src/main/java/com/skepseis/model/User.java
 
 import javax.persistence.*;
 import java.io.Serializable;
