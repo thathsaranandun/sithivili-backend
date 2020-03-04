@@ -5,91 +5,85 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
+        <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.skepseis</groupId>
-    <artifactId>sithivili-suit</artifactId>
+    <artifactId>sithivili-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>sithivili-suit</name>
-    <description>Sithivili Suit Spring Boot</description>
+    <name>sithivili-service</name>
+    <description>Sithivili service module</description>
 
-    <packaging>pom</packaging>
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
-
     <dependencies>
+
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.skepseis</groupId>
-            <artifactId>sithivili-controller</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.1.8.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>com.skepseis</groupId>
-            <artifactId>sithivili-cache</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
         </dependency>
         <dependency>
             <groupId>com.skepseis</groupId>
             <artifactId>sithivili-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-<<<<<<< Updated upstream
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.1.8.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
+            <groupId>com.skepseis</groupId>
+            <artifactId>sithivili-cache</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
-        <!--<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-gcp-starter</artifactId>
-            <version>1.0.0.RELEASE</version>
-        </dependency>-->
-        <!--<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
-            <version>1.0.0.RELEASE</version>
-        </dependency>-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.1.8.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.8.3</version>
+        </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>0.9.0</version>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-=======
-            <groupId>com.skepseis</groupId>
-            <artifactId>sithivili-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
->>>>>>> Stashed changes
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.com.skepseis.demo.RestApi</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
     <pluginRepositories>
         <pluginRepository>
@@ -117,10 +111,4 @@
         </repository>
     </repositories>
 
-    <modules>
-        <module>sithivili-controller</module>
-        <module>sithivili-cache</module>
-        <module>sithivili-model</module>
-        <module>sithivili-service</module>
-    </modules>
 </project>

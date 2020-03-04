@@ -1,0 +1,1052 @@
+2020-03-04 09:11:11,099 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 9124 (C:\Users\Nandun\Documents\Projects\suit\sithivili-service\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 09:11:11,106 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 09:11:11,174 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 09:11:11,175 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 09:11:12,376 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 09:11:12,468 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 84ms. Found 2 repository interfaces.
+2020-03-04 09:11:12,972 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cc72fdd7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 09:11:13,262 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 09:11:13,277 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 09:11:13,286 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 09:11:13,286 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 09:11:13,400 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 09:11:13,401 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2225 ms
+2020-03-04 09:11:13,615 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 09:11:13,747 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 09:11:13,800 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 09:11:13,895 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 09:11:13,898 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 09:11:14,079 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 09:11:14,227 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 09:11:14,354 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 09:11:14,865 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 09:11:15,088 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 09:11:15,230 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 09:11:15,453 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 09:11:15,880 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 09:11:16,084 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32bab924, org.springframework.security.web.context.SecurityContextPersistenceFilter@2d73d2b3, org.springframework.security.web.header.HeaderWriterFilter@4991917f, org.springframework.web.filter.CorsFilter@7f8c9665, org.springframework.security.web.authentication.logout.LogoutFilter@578a3e5, com.skepseis.service.security.JwtAuthenticationFilter@62cfcf6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5c7c4aaf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3818185f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b9117bb, org.springframework.security.web.session.SessionManagementFilter@3bb12fda, org.springframework.security.web.access.ExceptionTranslationFilter@547ccfce, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@229c7034]
+2020-03-04 09:11:16,129 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 09:11:16,266 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 09:11:16,320 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 09:11:16,343 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 09:11:16,375 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 09:11:16,577 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 09:11:16,597 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 09:11:16,601 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 5.985 seconds (JVM running for 7.709)
+2020-03-04 09:11:16,609 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 09:11:16,611 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 09:11:16
+2020-03-04 09:13:41,465 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 7328 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 09:13:41,470 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 09:13:41,536 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 09:13:41,536 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 09:13:43,072 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 09:13:43,162 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 81ms. Found 2 repository interfaces.
+2020-03-04 09:13:43,836 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a25b376] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 09:13:44,170 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 09:13:44,185 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 09:13:44,195 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 09:13:44,196 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 09:13:44,316 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 09:13:44,316 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2779 ms
+2020-03-04 09:13:44,521 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 09:13:44,649 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 09:13:44,715 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 09:13:44,815 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 09:13:44,819 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 09:13:44,928 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 09:13:45,057 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 09:13:45,187 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 09:13:45,608 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 09:13:45,807 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 09:13:45,939 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 09:13:46,095 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 09:13:46,396 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 09:13:46,596 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b42b5ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@303ccfb8, org.springframework.security.web.header.HeaderWriterFilter@3265520c, org.springframework.web.filter.CorsFilter@6bf3e2de, org.springframework.security.web.authentication.logout.LogoutFilter@58009c65, com.skepseis.service.security.JwtAuthenticationFilter@5cccbe33, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18cf5dd1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42fbbd6d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@667e6570, org.springframework.security.web.session.SessionManagementFilter@2041e215, org.springframework.security.web.access.ExceptionTranslationFilter@5b74e46e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a03bb94]
+2020-03-04 09:13:46,640 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 09:13:46,781 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 09:13:46,836 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 09:13:46,850 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 09:13:46,878 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 09:13:47,062 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 09:13:47,083 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 09:13:47,088 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 6.039 seconds (JVM running for 8.645)
+2020-03-04 09:13:47,095 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 09:13:47,096 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 09:13:47
+2020-03-04 09:17:35,320 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 19288 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 09:17:35,325 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 09:17:35,439 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 09:17:35,439 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 09:17:37,005 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 09:17:37,130 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 116ms. Found 2 repository interfaces.
+2020-03-04 09:17:37,893 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fae1e3fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 09:17:38,216 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 09:17:38,232 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 09:17:38,240 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 09:17:38,241 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 09:17:38,339 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 09:17:38,340 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2900 ms
+2020-03-04 09:17:38,499 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 09:17:38,601 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 09:17:38,653 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 09:17:38,738 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 09:17:38,742 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 09:17:38,895 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 09:17:39,019 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 09:17:39,134 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 09:17:39,529 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 09:17:39,725 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 09:17:39,859 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 09:17:39,999 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 09:17:40,291 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 09:17:40,472 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bf19b6e, org.springframework.security.web.context.SecurityContextPersistenceFilter@2db79763, org.springframework.security.web.header.HeaderWriterFilter@38471c81, org.springframework.web.filter.CorsFilter@1351cc5c, org.springframework.security.web.authentication.logout.LogoutFilter@4fc2651a, com.skepseis.service.security.JwtAuthenticationFilter@841bd69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f4f8199, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@25ea207c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b1881f, org.springframework.security.web.session.SessionManagementFilter@65808d30, org.springframework.security.web.access.ExceptionTranslationFilter@7c00d5f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28f30e0e]
+2020-03-04 09:17:40,510 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 09:17:40,637 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 09:17:40,690 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 09:17:40,704 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 09:17:40,736 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 09:17:40,922 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 09:17:40,941 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 09:17:40,945 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 6.029 seconds (JVM running for 8.984)
+2020-03-04 09:17:40,953 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 09:17:40,955 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 09:17:40
+2020-03-04 10:11:35,540 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 12224 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 10:11:35,543 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 10:11:35,608 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 10:11:35,608 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 10:11:36,692 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 10:11:36,772 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 74ms. Found 2 repository interfaces.
+2020-03-04 10:11:37,225 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$72fe7f7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 10:11:37,485 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 10:11:37,499 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 10:11:37,507 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 10:11:37,507 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 10:11:37,596 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 10:11:37,597 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1988 ms
+2020-03-04 10:11:37,740 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 10:11:37,831 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 10:11:37,877 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 10:11:37,935 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 10:11:37,939 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 10:11:38,027 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 10:11:38,116 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 10:11:38,221 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 10:11:38,611 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 10:11:38,798 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 10:11:38,926 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 10:11:39,070 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 10:11:39,385 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 10:11:39,609 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e4c8c70, org.springframework.security.web.context.SecurityContextPersistenceFilter@68a3f337, org.springframework.security.web.header.HeaderWriterFilter@5a316b3f, org.springframework.web.filter.CorsFilter@24204fc6, org.springframework.security.web.authentication.logout.LogoutFilter@4b9f4187, com.skepseis.service.security.JwtAuthenticationFilter@67a54be0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@64fd2674, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d27ee49, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2ad659e, org.springframework.security.web.session.SessionManagementFilter@3b1c4567, org.springframework.security.web.access.ExceptionTranslationFilter@6fdfa1b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@487f290b]
+2020-03-04 10:11:39,648 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 10:11:39,770 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 10:11:39,822 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 10:11:39,835 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 10:11:39,861 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 10:11:40,054 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 10:11:40,075 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 10:11:40,078 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 4.943 seconds (JVM running for 7.117)
+2020-03-04 10:11:40,088 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 10:11:40,090 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 10:11:40
+2020-03-04 10:19:18,894 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-04 10:19:18,895 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-2] Initializing Servlet 'dispatcherServlet'
+2020-03-04 10:19:18,902 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-2] Completed initialization in 7 ms
+2020-03-04 10:19:18,914 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 10:19:18,934 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [http-nio-8083-exec-2] find
+2020-03-04 10:26:28,825 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-4] Shutting down ExecutorService 'taskScheduler'
+2020-03-04 10:26:28,827 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-4] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 10:26:28,830 INFO com.zaxxer.hikari.HikariDataSource [Thread-4] HikariPool-1 - Shutdown initiated...
+2020-03-04 10:26:28,839 INFO com.zaxxer.hikari.HikariDataSource [Thread-4] HikariPool-1 - Shutdown completed.
+2020-03-04 10:26:29,433 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 12224 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 10:26:29,433 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 10:26:30,217 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 10:26:30,265 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.TypeNotPresentException: Type com.skepseis.model.Location not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117)
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95)
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1137)
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:491)
+	at org.springframework.core.GenericTypeResolver.buildTypeVariableMap(GenericTypeResolver.java:269)
+	at org.springframework.core.GenericTypeResolver.getTypeVariableMap(GenericTypeResolver.java:246)
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:115)
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:104)
+	at org.springframework.data.util.ClassTypeInformation.<init>(ClassTypeInformation.java:93)
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330)
+	at org.springframework.data.util.ClassTypeInformation.from(ClassTypeInformation.java:71)
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.<init>(AbstractRepositoryMetadata.java:58)
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:52)
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:73)
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:99)
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:145)
+	at org.springframework.data.repository.config.RepositoryBeanDefinitionRegistrarSupport.registerBeanDefinitions(RepositoryBeanDefinitionRegistrarSupport.java:85)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:364)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:363)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:145)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:117)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:327)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.skepseis.demo.RestApi.main(RestApi.java:32)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.ClassNotFoundException: com.skepseis.model.Location
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 45 common frames omitted
+2020-03-04 10:26:32,736 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 10:26:32,737 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 10:26:32,743 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 12224 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 10:26:32,743 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 10:26:33,573 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 10:26:33,595 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2020-03-04 10:26:33,752 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$72fe7f7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 10:26:33,850 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 10:26:33,851 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 10:26:33,852 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 10:26:33,852 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 10:26:33,884 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 10:26:33,884 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1138 ms
+2020-03-04 10:26:33,963 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2020-03-04 10:26:33,969 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2020-03-04 10:26:34,013 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 10:26:34,032 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 10:26:34,050 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 10:26:34,192 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 10:26:34,218 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 10:26:34,220 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 10:26:34,242 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 10:26:34,259 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.skepseis.service.impl.UserServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-03-04 10:26:34,259 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 10:26:34,259 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Shutdown initiated...
+2020-03-04 10:26:34,267 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Shutdown completed.
+2020-03-04 10:26:34,267 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-03-04 10:26:34,277 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-04 10:26:34,582 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in com.skepseis.demo.controllers.AdminController required a bean of type 'com.skepseis.service.impl.UserServiceImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.skepseis.service.impl.UserServiceImpl' in your configuration.
+
+2020-03-04 10:26:36,079 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 12224 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 10:26:36,079 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 10:26:36,408 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 10:26:36,437 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 28ms. Found 2 repository interfaces.
+2020-03-04 10:26:36,604 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$72fe7f7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 10:26:36,676 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 10:26:36,677 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 10:26:36,677 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 10:26:36,677 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 10:26:36,701 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 10:26:36,702 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 620 ms
+2020-03-04 10:26:36,744 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2020-03-04 10:26:36,749 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2020-03-04 10:26:36,762 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 10:26:36,770 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 10:26:36,782 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 10:26:36,877 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 10:26:36,917 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 10:26:37,006 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 10:26:37,014 ERROR com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] Error initializng RocksDB, check configurations and permissions
+2020-03-04 10:26:37,014 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 10:26:37,051 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a385279, org.springframework.security.web.context.SecurityContextPersistenceFilter@23d0b1cb, org.springframework.security.web.header.HeaderWriterFilter@17049653, org.springframework.web.filter.CorsFilter@747a07d9, org.springframework.security.web.authentication.logout.LogoutFilter@c65e761, com.skepseis.service.security.JwtAuthenticationFilter@7186c670, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b45aac2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@8c005f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39ef3173, org.springframework.security.web.session.SessionManagementFilter@1db3325c, org.springframework.security.web.access.ExceptionTranslationFilter@68de1a61, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@247a87cf]
+2020-03-04 10:26:37,141 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-04 10:26:37,150 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 10:26:37,215 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 10:26:37,247 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 10:26:37,251 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 10:26:37,252 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 1.227 seconds (JVM running for 904.291)
+2020-03-04 10:26:37,258 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   WebMvcAutoConfiguration matched:
+      - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
+      - found 'session' scope (OnWebApplicationCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#formContentFilter matched:
+      - @ConditionalOnProperty (spring.mvc.formcontent.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.FormContentFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration#hiddenHttpMethodFilter matched:
+      - @ConditionalOnProperty (spring.mvc.hiddenmethod.filter.enabled) matched (OnPropertyCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.web.filter.HiddenHttpMethodFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#defaultViewResolver matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.InternalResourceViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#requestContextFilter matched:
+      - @ConditionalOnMissingBean (types: org.springframework.web.context.request.RequestContextListener,org.springframework.web.filter.RequestContextFilter; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#viewResolver matched:
+      - @ConditionalOnBean (types: org.springframework.web.servlet.ViewResolver; SearchStrategy: all) found beans 'defaultViewResolver', 'beanNameViewResolver', 'mvcViewResolver'; @ConditionalOnMissingBean (names: viewResolver; types: org.springframework.web.servlet.view.ContentNegotiatingViewResolver; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter.FaviconConfiguration matched:
+      - @ConditionalOnProperty (spring.mvc.favicon.enabled) matched (OnPropertyCondition)
+
+
+Negative matches:
+-----------------
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#beanNameViewResolver:
+      Did not match:
+         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.view.BeanNameViewResolver; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.view.BeanNameViewResolver' beanNameViewResolver (OnBeanCondition)
+
+   WebMvcAutoConfiguration.WebMvcAutoConfigurationAdapter#localeResolver:
+      Did not match:
+         - @ConditionalOnProperty (spring.mvc.locale) did not find property 'locale' (OnPropertyCondition)
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2020-03-04 10:26:37,259 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 10:26:37
+2020-03-04 10:26:38,661 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-9] Shutting down ExecutorService 'taskScheduler'
+2020-03-04 10:26:38,662 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-9] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-04 10:26:38,663 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-9] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 10:26:38,664 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-3 - Shutdown initiated...
+2020-03-04 10:26:38,668 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-3 - Shutdown completed.
+2020-03-04 10:26:39,309 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 12224 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 10:26:39,310 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 10:26:39,999 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 10:26:40,006 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6ms. Found 0 repository interfaces.
+2020-03-04 10:26:40,075 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$72fe7f7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 10:26:40,126 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 10:26:40,126 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 10:26:40,126 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 10:26:40,126 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 10:26:40,148 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 10:26:40,148 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 835 ms
+2020-03-04 10:26:40,158 ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter [restartedMain] Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurity' defined in file [C:\Users\Nandun\Documents\Projects\suit\sithivili-service\target\classes\com\skepseis\service\security\WebSecurity.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Nandun\Documents\Projects\suit\sithivili-service\target\classes\com\skepseis\service\security\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.skepseis.service.repos.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-03-04 10:26:40,159 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-03-04 10:26:40,161 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-03-04 10:26:40,164 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-04 10:26:40,336 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.skepseis.service.security.UserDetailsServiceImpl required a bean of type 'com.skepseis.service.repos.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.skepseis.service.repos.UserRepository' in your configuration.
+
+2020-03-04 10:56:44,329 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 11256 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 10:56:44,333 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 10:56:44,400 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 10:56:44,400 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 10:56:45,422 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 10:56:45,491 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 64ms. Found 2 repository interfaces.
+2020-03-04 10:56:45,917 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fb693a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 10:56:46,136 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2020-03-04 10:56:46,149 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2020-03-04 10:56:46,157 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 10:56:46,157 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 10:56:46,251 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 10:56:46,252 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1852 ms
+2020-03-04 10:56:46,316 ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter [restartedMain] Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurity' defined in file [C:\Users\Nandun\Documents\Projects\suit\sithivili-service\target\classes\com\skepseis\service\security\WebSecurity.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsServiceImpl' defined in file [C:\Users\Nandun\Documents\Projects\suit\sithivili-service\target\classes\com\skepseis\service\security\UserDetailsServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': Cannot create inner bean '(inner bean)#162ad1d' of type [org.springframework.orm.jpa.SharedEntityManagerCreator] while setting bean property 'entityManager'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name '(inner bean)#162ad1d': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'inMemoryDatabaseShutdownExecutor' defined in class path resource [org/springframework/boot/devtools/autoconfigure/DevToolsDataSourceAutoConfiguration.class]: Unsatisfied dependency expressed through method 'inMemoryDatabaseShutdownExecutor' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-03-04 10:56:46,328 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2020-03-04 10:56:46,338 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-03-04 10:56:46,343 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-03-04 10:56:46,348 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-03-04 10:58:36,075 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 12128 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 10:58:36,079 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 10:58:36,144 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 10:58:36,145 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 10:58:36,228 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.skepseis.demo.RestApi]; nested exception is java.io.FileNotFoundException: class path resource [service.properties] cannot be opened because it does not exist
+2020-03-04 10:58:36,369 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.skepseis.demo.RestApi]; nested exception is java.io.FileNotFoundException: class path resource [service.properties] cannot be opened because it does not exist
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.skepseis.demo.RestApi.main(RestApi.java:34)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.io.FileNotFoundException: class path resource [service.properties] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:180)
+	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:159)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:99)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:73)
+	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:59)
+	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
+	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
+	at org.springframework.context.annotation.ConfigurationClassParser.processPropertySource(ConfigurationClassParser.java:452)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:271)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:199)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167)
+	... 18 common frames omitted
+2020-03-04 10:59:19,212 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 7312 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 10:59:19,215 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 10:59:19,282 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 10:59:19,283 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 10:59:20,268 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 10:59:20,337 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 64ms. Found 2 repository interfaces.
+2020-03-04 10:59:20,762 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cbce8962] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 10:59:20,988 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 10:59:21,001 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 10:59:21,009 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 10:59:21,010 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 10:59:21,096 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 10:59:21,096 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1813 ms
+2020-03-04 10:59:21,231 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 10:59:21,331 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 10:59:21,371 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 10:59:21,422 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 10:59:21,424 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 10:59:21,512 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 10:59:21,599 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 10:59:21,699 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 10:59:22,066 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 10:59:22,231 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 10:59:22,349 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 10:59:22,478 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 10:59:22,738 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 10:59:22,931 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8b2ec91, org.springframework.security.web.context.SecurityContextPersistenceFilter@413a1d2, org.springframework.security.web.header.HeaderWriterFilter@24793b29, org.springframework.web.filter.CorsFilter@2128e45f, org.springframework.security.web.authentication.logout.LogoutFilter@f0692de, com.skepseis.service.security.JwtAuthenticationFilter@482ec3d3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2b8374fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2bccf4cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47295b40, org.springframework.security.web.session.SessionManagementFilter@2ee81ddb, org.springframework.security.web.access.ExceptionTranslationFilter@2b4d715, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62aca18c]
+2020-03-04 10:59:22,967 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 10:59:23,087 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 10:59:23,139 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 10:59:23,150 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 10:59:23,172 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 10:59:23,322 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 10:59:23,338 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 10:59:23,342 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 4.555 seconds (JVM running for 5.903)
+2020-03-04 10:59:23,347 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 10:59:23,349 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 10:59:23
+2020-03-04 11:00:00,807 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-04 11:00:00,809 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-3] Initializing Servlet 'dispatcherServlet'
+2020-03-04 11:00:00,815 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-3] Completed initialization in 6 ms
+2020-03-04 11:00:00,826 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:00:00,843 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [http-nio-8083-exec-3] find
+2020-03-04 11:00:59,823 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:00:59,828 WARN org.springframework.web.servlet.DispatcherServlet [http-nio-8083-exec-5] No mapping for GET /swagger-ui.html
+2020-03-04 11:00:59,963 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,169 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,201 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,205 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,207 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,207 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,212 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,587 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,596 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,619 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,628 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,638 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,646 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,685 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,685 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,709 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,710 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,715 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,915 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,915 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:07,917 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:10,951 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:13,020 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:38,399 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:01:38,444 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:04:06,660 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:04:06,945 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-2] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  content-length = 49
+  accept = */*
+  bearer = Bearer sithivilisbbebt
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+  content-type = application/json
+  origin = http://localhost:8083
+  sec-fetch-site = same-origin
+  sec-fetch-mode = cors
+  referer = http://localhost:8083/documentation/swagger-ui.html
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+  cookie = JSESSIONID=1C48C8A0F177745DBD1C2E0F9FBC7E78
+
+2020-03-04 11:04:06,945 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-2] Logging request received
+2020-03-04 11:04:06,965 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8083-exec-2] HHH000397: Using ASTQueryTranslatorFactory
+2020-03-04 11:04:07,061 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-2] Invalid user details...
+2020-03-04 11:04:38,975 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:04:39,169 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-7] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  content-length = 48
+  accept = */*
+  bearer = Bearer sithivilisbbebt
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+  content-type = application/json
+  origin = http://localhost:8083
+  sec-fetch-site = same-origin
+  sec-fetch-mode = cors
+  referer = http://localhost:8083/documentation/swagger-ui.html
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+  cookie = JSESSIONID=1C48C8A0F177745DBD1C2E0F9FBC7E78
+
+2020-03-04 11:04:39,169 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-7] Logging request received
+2020-03-04 11:04:39,371 ERROR com.skepseis.model.helper.AES [http-nio-8083-exec-7] Error while encrypting: java.lang.NullPointerException
+2020-03-04 11:10:59,733 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:10:59,923 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-1] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  content-length = 48
+  accept = */*
+  bearer = Bearer sithivilisbbebt
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+  content-type = application/json
+  origin = http://localhost:8083
+  sec-fetch-site = same-origin
+  sec-fetch-mode = cors
+  referer = http://localhost:8083/documentation/swagger-ui.html
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+  cookie = JSESSIONID=1C48C8A0F177745DBD1C2E0F9FBC7E78
+
+2020-03-04 11:10:59,923 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-1] Logging request received
+2020-03-04 11:11:00,118 ERROR com.skepseis.model.helper.AES [http-nio-8083-exec-1] Error while encrypting: java.lang.NullPointerException
+2020-03-04 11:11:19,226 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:11:19,417 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-9] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  content-length = 48
+  accept = */*
+  bearer = Bearer sithivilisbbebt
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+  content-type = application/json
+  origin = http://localhost:8083
+  sec-fetch-site = same-origin
+  sec-fetch-mode = cors
+  referer = http://localhost:8083/documentation/swagger-ui.html
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+  cookie = JSESSIONID=1C48C8A0F177745DBD1C2E0F9FBC7E78
+
+2020-03-04 11:11:19,418 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-9] Logging request received
+2020-03-04 11:11:19,613 ERROR com.skepseis.model.helper.AES [http-nio-8083-exec-9] Error while encrypting: java.lang.NullPointerException
+2020-03-04 11:12:29,329 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 23124 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 11:12:29,333 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 11:12:29,405 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 11:12:29,406 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 11:12:30,402 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 11:12:30,478 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 61ms. Found 2 repository interfaces.
+2020-03-04 11:12:30,877 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8e5cb082] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 11:12:31,096 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 11:12:31,109 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 11:12:31,117 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 11:12:31,117 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 11:12:31,197 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 11:12:31,197 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1791 ms
+2020-03-04 11:12:31,333 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 11:12:31,435 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 11:12:31,476 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 11:12:31,526 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 11:12:31,528 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 11:12:31,614 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 11:12:31,697 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 11:12:31,793 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 11:12:32,152 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 11:12:32,315 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 11:12:32,425 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 11:12:33,221 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 11:12:33,473 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 11:12:33,664 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@396b43e7, org.springframework.security.web.context.SecurityContextPersistenceFilter@1e46af89, org.springframework.security.web.header.HeaderWriterFilter@508d75f2, org.springframework.web.filter.CorsFilter@38d30295, org.springframework.security.web.authentication.logout.LogoutFilter@3973b1ac, com.skepseis.service.security.JwtAuthenticationFilter@6680353, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2921217b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a7c08e4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@22ddce48, org.springframework.security.web.session.SessionManagementFilter@1680220b, org.springframework.security.web.access.ExceptionTranslationFilter@58355b5c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6263e486]
+2020-03-04 11:12:33,700 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 11:12:33,811 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 11:12:33,855 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 11:12:33,868 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 11:12:33,891 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 11:12:34,036 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 11:12:34,052 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 11:12:34,055 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 5.121 seconds (JVM running for 6.436)
+2020-03-04 11:12:34,060 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 11:12:34,062 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 11:12:34
+2020-03-04 11:12:49,559 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-04 11:12:49,561 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-04 11:12:49,569 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 8 ms
+2020-03-04 11:12:49,579 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,627 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,628 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,634 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,635 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,635 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,870 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,871 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,882 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,927 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,935 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,944 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,952 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,990 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:49,991 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:50,004 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:50,005 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:50,018 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:50,177 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:50,177 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:50,178 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:53,536 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:12:53,656 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:13:16,762 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:13:17,005 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-7] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  content-length = 48
+  accept = */*
+  bearer = Bearer sithivilisbbebt
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+  content-type = application/json
+  origin = http://localhost:8083
+  sec-fetch-site = same-origin
+  sec-fetch-mode = cors
+  referer = http://localhost:8083/documentation/swagger-ui.html
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+  cookie = JSESSIONID=1C48C8A0F177745DBD1C2E0F9FBC7E78
+
+2020-03-04 11:13:17,006 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-7] Logging request received
+2020-03-04 11:13:17,023 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8083-exec-7] HHH000397: Using ASTQueryTranslatorFactory
+2020-03-04 11:13:17,197 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:22,097 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 10236 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 11:19:22,101 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 11:19:22,169 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 11:19:22,169 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 11:19:23,168 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 11:19:23,241 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 67ms. Found 2 repository interfaces.
+2020-03-04 11:19:23,662 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$545cec34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 11:19:23,886 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 11:19:23,898 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 11:19:23,906 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 11:19:23,907 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 11:19:23,986 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 11:19:23,987 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1816 ms
+2020-03-04 11:19:24,120 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 11:19:24,217 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 11:19:24,267 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 11:19:24,306 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 11:19:24,308 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 11:19:24,390 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 11:19:24,473 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 11:19:24,569 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 11:19:24,933 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 11:19:25,096 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 11:19:25,210 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 11:19:26,180 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 11:19:26,438 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 11:19:26,625 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63c8d167, org.springframework.security.web.context.SecurityContextPersistenceFilter@468d65ea, org.springframework.security.web.header.HeaderWriterFilter@36ce1e69, org.springframework.web.filter.CorsFilter@3dd527ab, org.springframework.security.web.authentication.logout.LogoutFilter@73ffc702, com.skepseis.service.security.JwtAuthenticationFilter@12611a94, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4cfa7caf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@267b414c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@796201a5, org.springframework.security.web.session.SessionManagementFilter@f5eb9b, org.springframework.security.web.access.ExceptionTranslationFilter@6149e5cf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c80d648]
+2020-03-04 11:19:26,660 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 11:19:26,772 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 11:19:26,818 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 11:19:26,829 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 11:19:26,853 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 11:19:26,998 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 11:19:27,017 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 11:19:27,020 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 5.298 seconds (JVM running for 6.594)
+2020-03-04 11:19:27,027 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 11:19:27,028 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 11:19:27
+2020-03-04 11:19:32,674 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-04 11:19:32,676 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-04 11:19:32,685 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 9 ms
+2020-03-04 11:19:32,698 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:32,745 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:32,751 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:32,753 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:32,753 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:32,755 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,010 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,011 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,022 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,070 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,076 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,087 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,094 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,136 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,136 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,154 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,154 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,168 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,401 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,401 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,404 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:33,405 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:19:36,359 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:39,730 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 19600 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 11:22:39,734 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 11:22:39,799 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 11:22:39,799 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 11:22:40,786 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 11:22:40,855 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 65ms. Found 2 repository interfaces.
+2020-03-04 11:22:41,287 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3e6f1a83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 11:22:41,513 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 11:22:41,526 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 11:22:41,533 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 11:22:41,533 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 11:22:41,620 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 11:22:41,620 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1821 ms
+2020-03-04 11:22:41,753 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 11:22:41,852 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 11:22:41,893 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 11:22:41,946 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 11:22:41,948 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 11:22:42,036 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 11:22:42,120 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 11:22:42,217 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 11:22:42,577 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 11:22:42,739 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 11:22:42,855 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 11:22:42,983 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 11:22:43,241 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 11:22:43,436 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2565d7b3, org.springframework.security.web.context.SecurityContextPersistenceFilter@64f0050a, org.springframework.security.web.header.HeaderWriterFilter@60949b42, org.springframework.web.filter.CorsFilter@2db485c0, org.springframework.security.web.authentication.logout.LogoutFilter@58bb9538, com.skepseis.service.security.JwtAuthenticationFilter@4b2f197d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2faaec63, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a5234bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52294fee, org.springframework.security.web.session.SessionManagementFilter@4ba05cc4, org.springframework.security.web.access.ExceptionTranslationFilter@60a519ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@536be103]
+2020-03-04 11:22:43,473 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 11:22:43,589 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 11:22:43,637 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 11:22:43,649 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 11:22:43,671 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 11:22:43,836 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 11:22:43,854 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 11:22:43,858 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 4.521 seconds (JVM running for 5.867)
+2020-03-04 11:22:43,863 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 11:22:43,865 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 11:22:43
+2020-03-04 11:22:53,045 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-04 11:22:53,047 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-04 11:22:53,054 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 7 ms
+2020-03-04 11:22:53,066 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,116 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,117 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,121 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,122 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,122 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,353 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,357 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,363 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,410 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,417 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,428 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,435 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,476 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,476 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,485 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,487 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,510 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,676 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,676 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:53,676 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:57,605 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:22:57,714 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:44,586 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 7332 (C:\Users\Nandun\Documents\Projects\suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\suit)
+2020-03-04 11:25:44,590 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 11:25:44,652 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 11:25:44,653 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 11:25:45,615 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 11:25:45,677 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 59ms. Found 2 repository interfaces.
+2020-03-04 11:25:46,079 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f3b8ae9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 11:25:46,303 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 11:25:46,314 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 11:25:46,322 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 11:25:46,323 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 11:25:46,416 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 11:25:46,416 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1763 ms
+2020-03-04 11:25:46,548 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 11:25:46,642 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 11:25:46,681 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 11:25:46,728 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 11:25:46,730 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 11:25:46,813 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 11:25:46,893 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 11:25:46,990 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 11:25:47,344 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 11:25:47,506 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 11:25:47,617 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 11:25:48,519 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 11:25:48,767 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 11:25:48,958 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@627f27f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@545827e2, org.springframework.security.web.header.HeaderWriterFilter@2df11da9, org.springframework.web.filter.CorsFilter@54e99f23, org.springframework.security.web.authentication.logout.LogoutFilter@1be06b6c, com.skepseis.service.security.JwtAuthenticationFilter@2c97ed05, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69af0d06, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fbbeac4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@247e04c3, org.springframework.security.web.session.SessionManagementFilter@658a647d, org.springframework.security.web.access.ExceptionTranslationFilter@37088340, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f7b274f]
+2020-03-04 11:25:48,995 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 11:25:49,107 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 11:25:49,154 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 11:25:49,164 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 11:25:49,186 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 11:25:49,332 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 11:25:49,349 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 11:25:49,352 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 5.159 seconds (JVM running for 6.487)
+2020-03-04 11:25:49,358 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 11:25:49,360 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 11:25:49
+2020-03-04 11:25:54,495 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-04 11:25:54,497 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-04 11:25:54,505 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 7 ms
+2020-03-04 11:25:54,518 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,563 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,564 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,571 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,569 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,574 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,810 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,812 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,823 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,871 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,877 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,889 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,895 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,937 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,937 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,952 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,952 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:54,962 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:55,188 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:55,188 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:55,188 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:55,188 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] couldn't find bearer string, will ignore the header
+2020-03-04 11:25:57,342 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-04 11:26:17,940 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] couldn't find bearer string, will ignore the header
+2020-03-04 11:26:17,995 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] couldn't find bearer string, will ignore the header
+2020-03-04 11:27:27,758 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 11:27:28,020 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-1] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  content-length = 48
+  accept = */*
+  bearer = Bearer sithivilisbbebt
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+  content-type = application/json
+  origin = http://localhost:8083
+  sec-fetch-site = same-origin
+  sec-fetch-mode = cors
+  referer = http://localhost:8083/documentation/swagger-ui.html
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+  cookie = JSESSIONID=1C48C8A0F177745DBD1C2E0F9FBC7E78
+
+2020-03-04 11:27:28,020 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-1] Logging request received
+2020-03-04 11:27:28,036 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8083-exec-1] HHH000397: Using ASTQueryTranslatorFactory
+2020-03-04 11:27:52,857 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] authenticated user NewLogin, setting security context
+2020-03-04 11:27:52,858 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-9] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJOZXdMb2dpbiIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTgzMzAxNDQ4LCJleHAiOjE1ODMzMDE1MDh9.exHdTq7t4U5DD-Bm98CXpBwrnzYQxoj0LwjEf_cGBFg
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+  sec-fetch-site = same-origin
+  sec-fetch-mode = cors
+  referer = http://localhost:8083/documentation/swagger-ui.html
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+  cookie = JSESSIONID=1C48C8A0F177745DBD1C2E0F9FBC7E78
+
+2020-03-04 12:16:28,933 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 4612 (C:\Users\Nandun\Documents\Projects\sithivili-suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\sithivili-suit)
+2020-03-04 12:16:28,938 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 12:16:29,029 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 12:16:29,029 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 12:16:30,144 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 12:16:30,218 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 70ms. Found 2 repository interfaces.
+2020-03-04 12:16:30,666 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e7dfb7ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 12:16:30,928 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 12:16:30,943 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 12:16:30,951 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 12:16:30,952 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 12:16:31,050 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 12:16:31,051 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2022 ms
+2020-03-04 12:16:31,220 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 12:16:31,339 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 12:16:31,393 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 12:16:31,475 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 12:16:31,480 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 12:16:31,578 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 12:16:31,673 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 12:16:31,785 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 12:16:32,174 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 12:16:32,360 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 12:16:32,490 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 12:16:33,272 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 12:16:33,553 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 12:16:33,775 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@511790a0, org.springframework.security.web.context.SecurityContextPersistenceFilter@143ed966, org.springframework.security.web.header.HeaderWriterFilter@1693e8c7, org.springframework.web.filter.CorsFilter@56129a7b, org.springframework.security.web.authentication.logout.LogoutFilter@55ff495d, com.skepseis.service.security.JwtAuthenticationFilter@292390a7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55c2deb4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14492af4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51cdb969, org.springframework.security.web.session.SessionManagementFilter@6d449af5, org.springframework.security.web.access.ExceptionTranslationFilter@118b43c8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34e69856]
+2020-03-04 12:16:33,815 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 12:16:33,941 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 12:16:33,992 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 12:16:34,004 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 12:16:34,027 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 12:16:34,193 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 12:16:34,212 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 12:16:34,216 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 5.702 seconds (JVM running for 7.3)
+2020-03-04 12:16:34,223 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 12:16:34,225 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 12:16:34
+2020-03-04 13:17:35,416 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 13808 (C:\Users\Nandun\Documents\Projects\sithivili-suit\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\Projects\sithivili-suit)
+2020-03-04 13:17:35,419 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-04 13:17:35,491 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-04 13:17:35,491 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-04 13:17:36,565 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-04 13:17:36,638 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 69ms. Found 2 repository interfaces.
+2020-03-04 13:17:37,081 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$72764655] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-04 13:17:37,325 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-04 13:17:37,338 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-04 13:17:37,346 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-04 13:17:37,346 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-04 13:17:37,436 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-04 13:17:37,436 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1945 ms
+2020-03-04 13:17:37,591 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-04 13:17:37,696 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-04 13:17:37,739 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-04 13:17:37,791 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-04 13:17:37,793 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-04 13:17:37,885 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-04 13:17:37,979 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-04 13:17:38,090 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-04 13:17:38,510 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-04 13:17:38,702 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-04 13:17:38,825 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-03-04 13:17:38,961 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-04 13:17:39,251 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-04 13:17:39,464 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5b41f6e4, org.springframework.security.web.context.SecurityContextPersistenceFilter@66291aba, org.springframework.security.web.header.HeaderWriterFilter@3c1e65db, org.springframework.web.filter.CorsFilter@4e996d11, org.springframework.security.web.authentication.logout.LogoutFilter@719c7d4b, com.skepseis.service.security.JwtAuthenticationFilter@47955ae3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@442cea75, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68e97b70, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ef648b9, org.springframework.security.web.session.SessionManagementFilter@b267b33, org.springframework.security.web.access.ExceptionTranslationFilter@2700076c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44314d2f]
+2020-03-04 13:17:39,506 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-04 13:17:39,629 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-04 13:17:39,683 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-04 13:17:39,695 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-04 13:17:39,722 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-04 13:17:39,876 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-04 13:17:39,893 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-04 13:17:39,897 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 4.927 seconds (JVM running for 6.422)
+2020-03-04 13:17:39,903 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-04 13:17:39,905 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/04 13:17:39
+2020-03-04 13:17:56,917 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-04 13:17:56,918 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-04 13:17:56,927 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 8 ms
+2020-03-04 13:17:56,946 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-04 13:17:56,967 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [http-nio-8083-exec-1] find
