@@ -31,7 +31,7 @@ public class EmailServiceImpl implements EmailService {
     private String senderEmail;
 
     @Override
-    public void sendEmail(String to, ModelMap map) {
+    public void sendEmail(String to, ModelMap map, String template) {
         MimeMessage message = javaMailSender.createMimeMessage();
         MimeMessageHelper helper = null;
         try {
@@ -41,7 +41,7 @@ public class EmailServiceImpl implements EmailService {
 
             Context context = new Context();
             context.setVariables(map);
-            String html = templateEngine.process("email-template", context);
+            String html = templateEngine.process(template, context);
             log.info("Added feedback to email template");
             helper.setTo(to);
             helper.setText(html, true);

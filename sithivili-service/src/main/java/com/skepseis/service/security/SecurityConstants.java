@@ -21,7 +21,10 @@ public class SecurityConstants {
             "/api/users/user/new",
 
             //healthCheck
-            "/healthCheck"
+            "/healthCheck",
+
+            //user verification
+            "/api/users/user/verify"
 
 
 

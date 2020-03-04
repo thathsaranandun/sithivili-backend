@@ -8,13 +8,22 @@ import javax.persistence.EntityListeners;
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Client extends User {
-    private String mobile;
+    private String email;
+    private Boolean isVerified;
 
-    public String getMobile() {
-        return mobile;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Boolean isVerified() {
+        return isVerified;
+    }
+
+    public void setVerified(Boolean verified) {
+        isVerified = verified;
     }
 }
