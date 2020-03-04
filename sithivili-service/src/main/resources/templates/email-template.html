@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sending Govipola Mobile Application user feedback</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'/>
+
+    <!-- use the font -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0;" >
+
+<table border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse;">
+    <tr>
+        <td>
+            <p>Hi Admin,<br/>
+            New Request has been submitted by a Govipola Mobile App User.</p>
+            <!--<p style="text-decoration: underline" th:text="${subject}"></p>-->
+
+            <p th:utext="${sender}+'&lt;br/&gt;'+${mobile}+'&lt;br/&gt;'+${subject}+'&lt;br/&gt;'+${description}"></p>
+            <!--<p th:text="${mobile}"></p>-->
+            <!--<p th:text="${subject}"></p>-->
+            <!--<p th:text="${description}"></p>-->
+
+            <p></p>
+            <p>Thanks and Best Regards,<br/>
+            Govipola Team<br/>
+            This is auto generated email and no need to reply</p>
+            <!--<p th:text="${sender}"></p>-->
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
