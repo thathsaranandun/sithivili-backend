@@ -42,40 +42,9 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-<<<<<<< Updated upstream
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-        <!--<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-gcp-starter</artifactId>
-            <version>1.0.0.RELEASE</version>
-        </dependency>-->
-        <!--<dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
-            <version>1.0.0.RELEASE</version>
-        </dependency>-->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-=======
             <groupId>com.skepseis</groupId>
             <artifactId>sithivili-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
->>>>>>> Stashed changes
         </dependency>
     </dependencies>
 
