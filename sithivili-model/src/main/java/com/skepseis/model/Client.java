@@ -9,7 +9,6 @@ import javax.persistence.EntityListeners;
 @EntityListeners(AuditingEntityListener.class)
 public class Client extends User {
     private String email;
-    private Boolean isVerified;
 
     public String getEmail() {
         return email;
@@ -19,11 +18,4 @@ public class Client extends User {
         this.email = email;
     }
 
-    public Boolean isVerified() {
-        return isVerified;
-    }
-
-    public void setVerified(Boolean verified) {
-        isVerified = verified;
-    }
 }

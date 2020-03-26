@@ -1,320 +1,37 @@
-2020-03-04 10:10:59,842 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skepseis.demo.DemoApplicationTests], using SpringBootContextLoader
-2020-03-04 10:10:59,849 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.skepseis.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-03-04 10:10:59,850 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.skepseis.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-03-04 10:10:59,989 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.skepseis.demo.RestApi for test class com.skepseis.demo.DemoApplicationTests
-2020-03-04 10:11:00,113 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2020-03-04 10:11:00,132 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@702b8b12, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22e357dc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@49912c99, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@10163d6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2dde1bff, org.springframework.test.context.transaction.TransactionalTestExecutionListener@15bbf42f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@550ee7e5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5f9b2141, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@247d8ae, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@48974e45, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6a84a97d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6c130c45]
-2020-03-04 10:11:00,453 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-BK3CC8R with PID 12180 (started by Nandun in C:\Users\Nandun\Documents\Projects\suit\sithivili-controller)
-2020-03-04 10:11:00,453 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-03-04 10:11:01,636 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-04 10:11:01,737 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 90ms. Found 2 repository interfaces.
-2020-03-04 10:11:02,452 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$11e1f3cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-04 10:11:02,773 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-03-04 10:11:03,012 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-03-04 10:11:03,087 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+2020-03-26 10:20:19,602 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skepseis.demo.DemoApplicationTests], using SpringBootContextLoader
+2020-03-26 10:20:19,612 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.skepseis.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-03-26 10:20:19,613 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.skepseis.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-03-26 10:20:19,793 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.skepseis.demo.RestApi for test class com.skepseis.demo.DemoApplicationTests
+2020-03-26 10:20:19,939 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2020-03-26 10:20:19,959 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@37654521, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@15aab8c6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@33990a0c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4de4b452, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50b5ac82, org.springframework.test.context.transaction.TransactionalTestExecutionListener@101952da, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6babf3bf, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3059cbc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7ea9e1e2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@24fcf36f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@10feca44, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3fb1549b]
+2020-03-26 10:20:20,305 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-BK3CC8R with PID 20020 (started by Nandun in C:\Users\Nandun\Documents\skepsies\springboot-restapi\sithivili-controller)
+2020-03-26 10:20:20,307 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-03-26 10:20:21,514 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-26 10:20:21,649 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 117ms. Found 2 repository interfaces.
+2020-03-26 10:20:22,376 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cd9fef9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-26 10:20:22,790 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2020-03-26 10:20:22,994 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-03-26 10:20:23,080 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2020-03-04 10:11:03,199 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
-2020-03-04 10:11:03,201 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
-2020-03-04 10:11:03,413 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2020-03-04 10:11:04,128 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-03-04 10:11:04,317 INFO org.hibernate.id.enhanced.TableGenerator [main] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
-2020-03-04 10:11:04,967 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-03-04 10:11:04,974 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
-2020-03-04 10:11:05,881 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [main] RocksDB initialized and ready to use
-2020-03-04 10:11:07,197 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-03-04 10:11:08,070 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@225ddf5f, org.springframework.security.web.context.SecurityContextPersistenceFilter@6fa7ce4, org.springframework.security.web.header.HeaderWriterFilter@30665461, org.springframework.web.filter.CorsFilter@51468039, org.springframework.security.web.authentication.logout.LogoutFilter@7846913f, com.skepseis.service.security.JwtAuthenticationFilter@4ad3969, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a8b42a3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4552f905, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d654b5f, org.springframework.security.web.session.SessionManagementFilter@673a9db4, org.springframework.security.web.access.ExceptionTranslationFilter@3265995e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3278d065]
-2020-03-04 10:11:08,506 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-03-04 10:11:08,880 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
-2020-03-04 10:11:08,960 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-03-04 10:11:08,994 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
-2020-03-04 10:11:09,036 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-03-04 10:11:09,328 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 9.143 seconds (JVM running for 10.195)
-2020-03-04 10:11:09,344 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [main] save
-2020-03-04 10:11:09,521 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'taskScheduler'
-2020-03-04 10:11:09,528 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-03-04 10:11:09,536 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
-2020-03-04 10:11:09,548 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.
-2020-03-04 10:26:43,416 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skepseis.demo.DemoApplicationTests], using SpringBootContextLoader
-2020-03-04 10:26:43,422 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.skepseis.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-03-04 10:26:43,423 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.skepseis.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-03-04 10:26:43,535 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.skepseis.demo.RestApi for test class com.skepseis.demo.DemoApplicationTests
-2020-03-04 10:26:43,633 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2020-03-04 10:26:43,650 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@be35cd9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4944252c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@44821a96, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@a3d8174, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1ba9117e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@732c2a62, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@272ed83b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@41fecb8b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@120f102b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@625732, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@51dcb805, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@66498326]
-2020-03-04 10:26:43,918 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-BK3CC8R with PID 4092 (started by Nandun in C:\Users\Nandun\Documents\Projects\suit\sithivili-controller)
-2020-03-04 10:26:43,919 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-03-04 10:26:45,052 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-04 10:26:45,093 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
-2020-03-04 10:26:45,584 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f8860b42] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-04 10:26:45,891 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-03-04 10:26:46,118 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-03-04 10:26:46,181 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2020-03-04 10:26:46,265 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
-2020-03-04 10:26:46,267 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
-2020-03-04 10:26:46,416 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2020-03-04 10:26:47,065 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-03-04 10:26:47,228 INFO org.hibernate.id.enhanced.TableGenerator [main] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
-2020-03-04 10:26:47,746 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-03-04 10:26:47,752 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
-2020-03-04 10:26:48,012 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [main] RocksDB initialized and ready to use
-2020-03-04 10:26:48,058 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'users'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.skepseis.service.repos.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2020-03-04 10:26:48,059 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-03-04 10:26:48,067 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
-2020-03-04 10:26:48,079 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
-2020-03-04 10:26:48,087 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-03-04 10:26:48,227 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field users in com.skepseis.service.impl.UserServiceImpl required a bean of type 'com.skepseis.service.repos.UserRepository' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'com.skepseis.service.repos.UserRepository' in your configuration.
-
-2020-03-04 10:26:48,230 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@be35cd9] to prepare test instance [com.skepseis.demo.DemoApplicationTests@64757d56]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminController': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'users'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.skepseis.service.repos.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
-	... 27 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'users'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.skepseis.service.repos.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 45 common frames omitted
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.skepseis.service.repos.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1658)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1217)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	... 58 common frames omitted
-2020-03-04 13:14:30,731 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skepseis.demo.DemoApplicationTests], using SpringBootContextLoader
-2020-03-04 13:14:30,736 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.skepseis.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-03-04 13:14:30,736 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.skepseis.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-03-04 13:14:30,858 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.skepseis.demo.RestApi for test class com.skepseis.demo.DemoApplicationTests
-2020-03-04 13:14:30,954 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2020-03-04 13:14:30,971 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f9b2141, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@247d8ae, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@48974e45, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6a84a97d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6c130c45, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50ad3bc1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@223aa2f7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6d3a388c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@193f604a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@20f5239f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@57af006c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6bedbc4d]
-2020-03-04 13:14:31,255 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-BK3CC8R with PID 9376 (started by Nandun in C:\Users\Nandun\Documents\Projects\sithivili-suit\sithivili-controller)
-2020-03-04 13:14:31,256 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-03-04 13:14:31,432 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.skepseis.demo.RestApi]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/service.properties]
-2020-03-04 13:14:31,820 ERROR org.springframework.boot.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.skepseis.demo.RestApi]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/service.properties]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/service.properties]
-	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:158)
-	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:159)
-	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:99)
-	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:73)
-	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:59)
-	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
-	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
-	at org.springframework.context.annotation.ConfigurationClassParser.processPropertySource(ConfigurationClassParser.java:452)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:271)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:199)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167)
-	... 39 common frames omitted
-2020-03-04 13:14:31,824 ERROR org.springframework.test.context.TestContextManager [main] Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@5f9b2141] to prepare test instance [com.skepseis.demo.DemoApplicationTests@764faa6]
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
-	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:273)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
-Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.skepseis.demo.RestApi]; nested exception is java.io.FileNotFoundException: Could not open ServletContext resource [/service.properties]
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:181)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:315)
-	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:232)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275)
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95)
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:705)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:531)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:119)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
-	... 27 common frames omitted
-Caused by: java.io.FileNotFoundException: Could not open ServletContext resource [/service.properties]
-	at org.springframework.web.context.support.ServletContextResource.getInputStream(ServletContextResource.java:158)
-	at org.springframework.core.io.support.EncodedResource.getInputStream(EncodedResource.java:159)
-	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:99)
-	at org.springframework.core.io.support.PropertiesLoaderUtils.fillProperties(PropertiesLoaderUtils.java:73)
-	at org.springframework.core.io.support.PropertiesLoaderUtils.loadProperties(PropertiesLoaderUtils.java:59)
-	at org.springframework.core.io.support.ResourcePropertySource.<init>(ResourcePropertySource.java:67)
-	at org.springframework.core.io.support.DefaultPropertySourceFactory.createPropertySource(DefaultPropertySourceFactory.java:37)
-	at org.springframework.context.annotation.ConfigurationClassParser.processPropertySource(ConfigurationClassParser.java:452)
-	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:271)
-	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:242)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:199)
-	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:167)
-	... 39 common frames omitted
-2020-03-04 13:15:58,283 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skepseis.demo.DemoApplicationTests], using SpringBootContextLoader
-2020-03-04 13:15:58,289 INFO org.springframework.test.context.support.AbstractContextLoader [main] Could not detect default resource locations for test class [com.skepseis.demo.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2020-03-04 13:15:58,290 INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.skepseis.demo.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2020-03-04 13:15:58,417 INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.skepseis.demo.RestApi for test class com.skepseis.demo.DemoApplicationTests
-2020-03-04 13:15:58,514 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
-2020-03-04 13:15:58,532 INFO org.springframework.test.context.support.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f9b2141, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@247d8ae, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@48974e45, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6a84a97d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6c130c45, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50ad3bc1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@223aa2f7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@6d3a388c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@193f604a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@20f5239f, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@57af006c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6bedbc4d]
-2020-03-04 13:15:58,843 INFO org.springframework.boot.StartupInfoLogger [main] Starting DemoApplicationTests on DESKTOP-BK3CC8R with PID 21376 (started by Nandun in C:\Users\Nandun\Documents\Projects\sithivili-suit\sithivili-controller)
-2020-03-04 13:15:58,844 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-03-04 13:15:59,938 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-03-04 13:16:00,037 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 91ms. Found 2 repository interfaces.
-2020-03-04 13:16:00,716 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$448370a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-03-04 13:16:01,027 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
-2020-03-04 13:16:01,269 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-03-04 13:16:01,337 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2020-03-04 13:16:01,423 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
-2020-03-04 13:16:01,425 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
-2020-03-04 13:16:01,602 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2020-03-04 13:16:02,276 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2020-03-04 13:16:02,446 INFO org.hibernate.id.enhanced.TableGenerator [main] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
-2020-03-04 13:16:03,037 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-03-04 13:16:03,043 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
-2020-03-04 13:16:03,366 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [main] RocksDB initialized and ready to use
-2020-03-04 13:16:04,573 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-03-04 13:16:05,390 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@515c732d, org.springframework.security.web.context.SecurityContextPersistenceFilter@27746c5e, org.springframework.security.web.header.HeaderWriterFilter@5018b56b, org.springframework.web.filter.CorsFilter@5ae87de0, org.springframework.security.web.authentication.logout.LogoutFilter@25f14e93, com.skepseis.service.security.JwtAuthenticationFilter@50b38342, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2270f58d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61bd0845, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f85904a, org.springframework.security.web.session.SessionManagementFilter@5e05a706, org.springframework.security.web.access.ExceptionTranslationFilter@4ebd8d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2759749]
-2020-03-04 13:16:05,806 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-03-04 13:16:06,234 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
-2020-03-04 13:16:06,318 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
-2020-03-04 13:16:06,364 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
-2020-03-04 13:16:06,421 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
-2020-03-04 13:16:06,775 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 8.197 seconds (JVM running for 9.179)
-2020-03-04 13:16:06,790 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [main] save
-2020-03-04 13:16:06,934 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'taskScheduler'
-2020-03-04 13:16:06,939 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-03-04 13:16:06,943 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
-2020-03-04 13:16:06,957 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.
+2020-03-26 10:20:23,188 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-26 10:20:23,190 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2020-03-26 10:20:23,396 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-26 10:20:24,148 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-26 10:20:24,341 INFO org.hibernate.id.enhanced.TableGenerator [main] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-26 10:20:24,988 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-26 10:20:24,995 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [main] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-26 10:20:25,178 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [main] RocksDB initialized and ready to use
+2020-03-26 10:20:26,672 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-26 10:20:27,549 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53432aef, org.springframework.security.web.context.SecurityContextPersistenceFilter@57f725b8, org.springframework.security.web.header.HeaderWriterFilter@77ec9fdb, org.springframework.web.filter.CorsFilter@2a16d393, org.springframework.security.web.authentication.logout.LogoutFilter@7e2a76be, com.skepseis.service.security.JwtAuthenticationFilter@4bdef487, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28bc9749, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@64540344, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14d1032a, org.springframework.security.web.session.SessionManagementFilter@34652065, org.springframework.security.web.access.ExceptionTranslationFilter@24842b8e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7535f28]
+2020-03-26 10:20:27,992 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-26 10:20:28,426 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'taskScheduler'
+2020-03-26 10:20:28,558 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2020-03-26 10:20:28,597 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2020-03-26 10:20:28,645 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2020-03-26 10:20:29,002 INFO org.springframework.boot.StartupInfoLogger [main] Started DemoApplicationTests in 8.994 seconds (JVM running for 10.401)
+2020-03-26 10:20:29,018 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [main] save
+2020-03-26 10:20:29,178 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-3] Shutting down ExecutorService 'taskScheduler'
+2020-03-26 10:20:29,184 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-3] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-03-26 10:20:29,189 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown initiated...
+2020-03-26 10:20:29,204 INFO com.zaxxer.hikari.HikariDataSource [Thread-3] HikariPool-1 - Shutdown completed.

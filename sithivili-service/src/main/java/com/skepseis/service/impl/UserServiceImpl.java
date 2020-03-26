@@ -38,6 +38,9 @@ public class UserServiceImpl implements UserService {
     @Value("${user.verify.link}")
     private String verifyLink;
 
+    @Value("${user.pwd.reset.link}")
+    private String resetPwdLink;
+
     private final String USER_TYPE_CLIENT = "Client";
     private final String USER_TYPE_VOL = "Volunteer";
     private final String USER_TYPE_ADMIN = "Admin";
@@ -67,7 +70,7 @@ public class UserServiceImpl implements UserService {
                 map.addAttribute("username",user.getUsername());
                 String link = verifyLink+"?username="+user.getUsername();
                 map.addAttribute("link",link);
-                emailService.sendEmail(user.getEmail(),map, "email-template");
+                emailService.sendEmail(user.getEmail(),map, "user-verify-template");
             } else {
                 msg = "Username already in use. Please use a different username";
                 log.info("Username already exists.");
@@ -120,6 +123,8 @@ public class UserServiceImpl implements UserService {
 
         User foundUser = users.findByUsernameAndPassword(user.getUsername(),user.getPassword());
         if(null != foundUser){
+            foundUser.setLoginFlag(true);
+            users.save(foundUser);
             response.setUser(foundUser);
             response.getUser().setPassword(null);
             response.setDbdata(true);
@@ -178,20 +183,33 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean sendPasswordResetEmail(String email) {
-        return false;
+    public boolean sendPasswordResetEmail(String username) {
+        Client user = (Client) users.findByUsername(username);
+        ModelMap map = new ModelMap();
+        map.addAttribute("username",user.getUsername());
+        String link = resetPwdLink+"?username="+user.getUsername();
+        map.addAttribute("link",link);
+        try{
+            emailService.sendEmail(user.getEmail(),map,"password-reset-template");
+            return true;
+        }catch (Exception e){
+            return false;
+        }
     }
 
     @Override
-    public boolean resetPassword(String username) {
-        return false;
+    public boolean resetPassword(String username,String password) {
+        User user = users.findByUsername(username);
+        user.setPassword(password);
+        users.save(user);
+        return true;
     }
 
     @Override
-    public void verifyUser(String username, Boolean isVerified) {
+    public void verifyUser(String username) {
         Client client = (Client) users.findByUsernameAndUsertype(username, USER_TYPE_CLIENT);
         if(client != null){
-            client.setVerified(isVerified);
+            client.setVerified(true);
             users.save(client);
             log.info("Client {} has been verified.",username);
         }

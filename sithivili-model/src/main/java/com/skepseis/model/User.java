@@ -26,6 +26,8 @@ public class User implements Serializable {
     private String password;
     private String usertype;
     private String image;
+    private Boolean loginFlag;
+    private Boolean isVerified;
 
     @Transient
     private final String SECRET_KEY = "sthvl@sk";
@@ -81,6 +83,22 @@ public class User implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Boolean getLoginFlag() {
+        return loginFlag;
+    }
+
+    public void setLoginFlag(Boolean loginFlag) {
+        this.loginFlag = loginFlag;
+    }
+
+    public Boolean isVerified() {
+        return isVerified;
+    }
+
+    public void setVerified(Boolean verified) {
+        isVerified = verified;
     }
 
     @Override

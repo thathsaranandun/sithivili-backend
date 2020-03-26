@@ -43,9 +43,9 @@ public interface UserService {
     /* Register new admin (Admin function)*/
     Admin registerAdmin(Admin user);
 
-    boolean sendPasswordResetEmail(String email);
+    boolean sendPasswordResetEmail(String username);
 
-    boolean resetPassword(String username);
+    boolean resetPassword(String username, String password);
 
-    void verifyUser(String username, Boolean isVerified);
+    void verifyUser(String username);
 }

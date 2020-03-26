@@ -42,7 +42,6 @@ public class EmailServiceImpl implements EmailService {
             Context context = new Context();
             context.setVariables(map);
             String html = templateEngine.process(template, context);
-            log.info("Added feedback to email template");
             helper.setTo(to);
             helper.setText(html, true);
             helper.setSubject("Sithivili Email Verification");

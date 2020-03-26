@@ -6,6 +6,7 @@ import com.skepseis.demo.helper.AuthorizationHelper;
 import com.skepseis.model.Client;
 import com.skepseis.model.User;
 import com.skepseis.model.Volunteer;
+import com.skepseis.service.impl.EmailServiceImpl;
 import com.skepseis.service.impl.UserServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
@@ -14,11 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
 
@@ -37,6 +35,8 @@ public class UserController {
     @Autowired
     UserServiceImpl userService;
 
+    @Autowired
+    EmailServiceImpl emailService;
 
     /**
      * Get all Users
@@ -147,17 +147,27 @@ public class UserController {
     }
 
     @GetMapping("test2")
-    public boolean resetEmailConfirm(@PathVariable(value = "username") int username){
-        return true;
+    public boolean sendPwdResetEmail(@PathVariable(value = "username") String username,@RequestHeader Map<String, String> bearer){
+        authorizationHelper.authorizeHeader(bearer);
+        return userService.sendPasswordResetEmail(username);
     }
 
     @GetMapping(Path.USER_VERIFY)
     public void verifyUser(@RequestParam(value = "username") String username, HttpServletResponse httpServletResponse){
-        userService.verifyUser(username,true);
-
+        userService.verifyUser(username);
         httpServletResponse.setHeader("Location", "http://google.com");
         httpServletResponse.setStatus(302);
     }
+
+    @GetMapping(Path.LOG_OUT)
+    public ResponseEntity logout(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
+        User user = userService.getUser(userId);
+        user.setLoginFlag(false);
+        return ResponseEntity.ok().build();
+    }
+
+
 
 
 }
