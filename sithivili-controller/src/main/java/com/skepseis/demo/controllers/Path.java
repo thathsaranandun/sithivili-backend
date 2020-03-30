@@ -41,4 +41,6 @@ public interface Path {
     String USER_VERIFY = "/user/verify";
 
     String LOG_OUT = "/user/logout";
+
+    String PASSWORD_RESET_EMAIL = "/user/email/reset";
 }

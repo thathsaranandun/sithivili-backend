@@ -5,6 +5,7 @@ import com.skepseis.model.Admin;
 import com.skepseis.model.Client;
 import com.skepseis.model.User;
 import com.skepseis.model.Volunteer;
+import com.skepseis.service.repos.ClientRepository;
 import com.skepseis.service.repos.UserRepository;
 import com.skepseis.model.response.LoginResponse;
 import com.skepseis.model.response.SignUpResponse;
@@ -25,6 +26,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     UserRepository users;
+
+    @Autowired
+    ClientRepository clientRepository;
 
     @Autowired
     JwtTokenUtil jwtTokenUtil;
@@ -183,9 +187,12 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean sendPasswordResetEmail(String username) {
-        Client user = (Client) users.findByUsername(username);
+    public boolean sendPasswordResetEmail(String email) {
+        Client user = clientRepository.findByEmail(email);
         ModelMap map = new ModelMap();
+        if(null == user){
+            return false;
+        }
         map.addAttribute("username",user.getUsername());
         String link = resetPwdLink+"?username="+user.getUsername();
         map.addAttribute("link",link);
@@ -193,6 +200,7 @@ public class UserServiceImpl implements UserService {
             emailService.sendEmail(user.getEmail(),map,"password-reset-template");
             return true;
         }catch (Exception e){
+            log.error("Exception occurred", e);
             return false;
         }
     }

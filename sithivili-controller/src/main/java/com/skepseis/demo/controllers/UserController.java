@@ -146,10 +146,10 @@ public class UserController {
         return true;
     }
 
-    @GetMapping("test2")
-    public boolean sendPwdResetEmail(@PathVariable(value = "username") String username,@RequestHeader Map<String, String> bearer){
+    @PostMapping(Path.PASSWORD_RESET_EMAIL)
+    public boolean sendPwdResetEmail(@Valid @RequestBody String email,@RequestHeader Map<String, String> bearer){
         authorizationHelper.authorizeHeader(bearer);
-        return userService.sendPasswordResetEmail(username);
+        return userService.sendPasswordResetEmail(email);
     }
 
     @GetMapping(Path.USER_VERIFY)

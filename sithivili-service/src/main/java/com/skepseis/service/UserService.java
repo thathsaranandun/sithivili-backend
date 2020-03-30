@@ -43,7 +43,7 @@ public interface UserService {
     /* Register new admin (Admin function)*/
     Admin registerAdmin(Admin user);
 
-    boolean sendPasswordResetEmail(String username);
+    boolean sendPasswordResetEmail(String email);
 
     boolean resetPassword(String username, String password);
 

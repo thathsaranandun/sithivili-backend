@@ -2,7 +2,7 @@ package com.skepseis.service.security;
 
 public class SecurityConstants {
     public static final String SECRET = "SecretKeyToGenJWTs";
-    public static final long EXPIRATION_TIME = 864_000_000;
+    public static final long EXPIRATION_TIME = 864_000_000;// 10 days
     public static final String TOKEN_PREFIX = "Bearer ";
     public static final String HEADER_STRING = "Authorization";
     public static final String[] AUTH_WHITELIST = {
@@ -24,7 +24,10 @@ public class SecurityConstants {
             "/healthCheck",
 
             //user verification
-            "/api/users/user/verify"
+            "/api/users/user/verify",
+
+            //password reset
+            "/api/users/user/email/reset"
 
 
 
