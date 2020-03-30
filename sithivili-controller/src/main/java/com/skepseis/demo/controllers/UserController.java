@@ -160,11 +160,9 @@ public class UserController {
     }
 
     @GetMapping(Path.LOG_OUT)
-    public ResponseEntity logout(@PathVariable(value = "id") int userId,@RequestHeader Map<String, String> bearer) {
+    public boolean logout(@PathVariable(value = "id") Integer userId,@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-        User user = userService.getUser(userId);
-        user.setLoginFlag(false);
-        return ResponseEntity.ok().build();
+        return userService.logout(userId);
     }
 
 

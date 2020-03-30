@@ -40,7 +40,7 @@ public interface Path {
     //verify user
     String USER_VERIFY = "/user/verify";
 
-    String LOG_OUT = "/user/logout";
+    String LOG_OUT = "/user/logout/{id}";
 
     String PASSWORD_RESET_EMAIL = "/user/email/reset";
 }

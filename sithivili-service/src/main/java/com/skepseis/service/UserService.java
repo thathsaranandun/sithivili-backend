@@ -48,4 +48,6 @@ public interface UserService {
     boolean resetPassword(String username, String password);
 
     void verifyUser(String username);
+
+    boolean logout(Integer id);
 }

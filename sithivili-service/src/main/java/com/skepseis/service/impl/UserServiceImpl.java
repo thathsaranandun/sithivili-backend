@@ -224,5 +224,17 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    @Override
+    public boolean logout(Integer id) {
+        try {
+            User user = users.getOne(id);
+            user.setLoginFlag(false);
+            users.save(user);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
+    }
+
 
 }
