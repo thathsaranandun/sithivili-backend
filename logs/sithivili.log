@@ -1050,3 +1050,283 @@ Caused by: java.io.FileNotFoundException: class path resource [service.propertie
 2020-03-04 13:17:56,927 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 8 ms
 2020-03-04 13:17:56,946 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
 2020-03-04 13:17:56,967 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [http-nio-8083-exec-1] find
+2020-03-31 01:51:50,469 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 20188 (C:\Users\Nandun\Documents\skepsies\springboot-restapi\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\skepsies\springboot-restapi)
+2020-03-31 01:51:50,473 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-31 01:51:50,538 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-31 01:51:50,538 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-31 01:51:51,573 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-31 01:51:51,678 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 101ms. Found 3 repository interfaces.
+2020-03-31 01:51:52,316 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ec9a9d1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-31 01:51:52,544 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-31 01:51:52,557 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-31 01:51:52,565 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-31 01:51:52,565 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-31 01:51:52,652 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-31 01:51:52,652 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2114 ms
+2020-03-31 01:51:52,801 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-31 01:51:52,900 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-31 01:51:52,942 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-31 01:51:52,985 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-31 01:51:52,987 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-31 01:51:53,076 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-31 01:51:53,163 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-31 01:51:53,260 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-31 01:51:53,670 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-31 01:51:53,829 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-31 01:51:53,949 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2020-03-31 01:51:54,122 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-31 01:51:54,459 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-31 01:51:54,666 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@458b585d, org.springframework.security.web.context.SecurityContextPersistenceFilter@2effb384, org.springframework.security.web.header.HeaderWriterFilter@57ecd896, org.springframework.web.filter.CorsFilter@64eb8eb5, org.springframework.security.web.authentication.logout.LogoutFilter@1998af2c, com.skepseis.service.security.JwtAuthenticationFilter@de15b4f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6658e69e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23030fd3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6faa218e, org.springframework.security.web.session.SessionManagementFilter@1eb522a6, org.springframework.security.web.access.ExceptionTranslationFilter@21d9d21c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@54964cc0]
+2020-03-31 01:51:54,701 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-31 01:51:54,823 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-31 01:51:54,882 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-31 01:51:54,892 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-31 01:51:54,918 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-31 01:51:55,072 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-31 01:51:55,089 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-31 01:51:55,093 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 5.07 seconds (JVM running for 6.394)
+2020-03-31 01:51:55,098 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-31 01:51:55,099 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/31 01:51:55
+2020-03-31 01:57:36,652 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-31 01:57:36,653 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-31 01:57:36,660 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 7 ms
+2020-03-31 01:57:36,690 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] couldn't find bearer string, will ignore the header
+2020-03-31 01:57:37,040 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-3] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  content-length = 36
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  content-type = application/json
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 01:57:37,041 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-3] Logging request received
+2020-03-31 01:57:37,058 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8083-exec-3] HHH000397: Using ASTQueryTranslatorFactory
+2020-03-31 01:57:37,365 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] authenticated user user3, setting security context
+2020-03-31 01:57:37,366 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-4] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 01:57:52,164 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-6] authenticated user user3, setting security context
+2020-03-31 01:57:52,167 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-6] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 01:57:52,188 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-6] Requested user details: {"id"=18,"username"="vol5","password"="fRj7kSXeNu7QpLQLgR2VTQ==","image"="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-512.png"}
+2020-03-31 01:57:52,405 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] authenticated user user3, setting security context
+2020-03-31 01:57:52,407 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-7] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 01:57:52,412 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-7] Requested user details: {"id"=18,"username"="vol5","password"="fRj7kSXeNu7QpLQLgR2VTQ==","image"="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-512.png"}
+2020-03-31 01:57:54,724 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] couldn't find bearer string, will ignore the header
+2020-03-31 01:58:45,636 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting RestApi on DESKTOP-BK3CC8R with PID 12948 (C:\Users\Nandun\Documents\skepsies\springboot-restapi\sithivili-controller\target\classes started by Nandun in C:\Users\Nandun\Documents\skepsies\springboot-restapi)
+2020-03-31 01:58:45,639 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-03-31 01:58:45,710 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-31 01:58:45,711 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-31 01:58:46,830 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-03-31 01:58:46,906 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 72ms. Found 3 repository interfaces.
+2020-03-31 01:58:47,357 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$225db958] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-03-31 01:58:47,589 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-03-31 01:58:47,604 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-03-31 01:58:47,612 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-03-31 01:58:47,612 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-03-31 01:58:47,706 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-03-31 01:58:47,706 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 1995 ms
+2020-03-31 01:58:47,854 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2020-03-31 01:58:47,949 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2020-03-31 01:58:48,003 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2020-03-31 01:58:48,048 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate Core {5.3.10.Final}
+2020-03-31 01:58:48,050 INFO org.hibernate.cfg.Environment [restartedMain] HHH000206: hibernate.properties not found
+2020-03-31 01:58:48,148 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2020-03-31 01:58:48,236 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-03-31 01:58:48,344 INFO org.hibernate.id.enhanced.TableGenerator [restartedMain] HHH000398: Explicit segment value for id generator [hibernate_sequences.sequence_name] suggested; using default [default]
+2020-03-31 01:58:48,752 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-03-31 01:58:48,925 INFO org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor [restartedMain] Autowired annotation is not supported on static fields: static com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl com.skepseis.demo.RestApi.rocksDBRepository
+2020-03-31 01:58:49,044 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2020-03-31 01:58:49,383 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] RocksDB initialized and ready to use
+2020-03-31 01:58:49,703 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-03-31 01:58:49,904 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46a165f7, org.springframework.security.web.context.SecurityContextPersistenceFilter@684d2a7f, org.springframework.security.web.header.HeaderWriterFilter@5c2da5d3, org.springframework.web.filter.CorsFilter@4c4c3693, org.springframework.security.web.authentication.logout.LogoutFilter@68ee087, com.skepseis.service.security.JwtAuthenticationFilter@6b81e75, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27583741, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a6df1bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e94ecb9, org.springframework.security.web.session.SessionManagementFilter@4bdf983f, org.springframework.security.web.access.ExceptionTranslationFilter@39a52161, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62a07ea1]
+2020-03-31 01:58:49,943 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-03-31 01:58:50,060 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2020-03-31 01:58:50,118 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-03-31 01:58:50,130 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-03-31 01:58:50,153 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-03-31 01:58:50,323 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-03-31 01:58:50,340 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-03-31 01:58:50,343 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started RestApi in 5.156 seconds (JVM running for 6.547)
+2020-03-31 01:58:50,349 INFO com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl [restartedMain] save
+2020-03-31 01:58:50,350 INFO com.skepseis.demo.RestApi [restartedMain] Server started @2020/03/31 01:58:50
+2020-03-31 01:58:54,474 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-31 01:58:54,476 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-31 01:58:54,489 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 13 ms
+2020-03-31 01:58:54,507 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header
+2020-03-31 01:58:54,553 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [http-nio-8083-exec-1] HHH000397: Using ASTQueryTranslatorFactory
+2020-03-31 01:59:10,243 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-2] authenticated user user3, setting security context
+2020-03-31 01:59:10,250 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-2] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 01:59:10,265 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-2] Requested user details: {"id"=18,"username"="vol5","password"="fRj7kSXeNu7QpLQLgR2VTQ==","image"="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-512.png"}
+2020-03-31 01:59:22,784 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-3] authenticated user user3, setting security context
+2020-03-31 01:59:22,786 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-3] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 01:59:22,790 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-3] Requested user details: {"id"=18,"username"="vol5","password"="fRj7kSXeNu7QpLQLgR2VTQ==","image"="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-512.png"}
+2020-03-31 01:59:26,301 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-7] couldn't find bearer string, will ignore the header
+2020-03-31 02:00:25,075 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-5] authenticated user user3, setting security context
+2020-03-31 02:00:25,077 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-5] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 02:00:25,082 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-5] Requested user details: {"id"=18,"username"="vol5","password"="fRj7kSXeNu7QpLQLgR2VTQ==","image"="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-512.png"}
+2020-03-31 02:00:26,675 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-9] authenticated user user3, setting security context
+2020-03-31 02:00:26,676 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-9] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 02:00:28,499 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-4] authenticated user user3, setting security context
+2020-03-31 02:00:28,501 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-4] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 02:00:28,508 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-4] Requested user details: {"id"=18,"username"="vol5","password"="fRj7kSXeNu7QpLQLgR2VTQ==","image"="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-512.png"}
+2020-03-31 02:00:28,826 INFO com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-8] authenticated user user3, setting security context
+2020-03-31 02:00:28,828 INFO com.skepseis.demo.helper.AuthorizationHelper [http-nio-8083-exec-8] 
+  Headers
+  -------
+  host = localhost:8083
+  connection = keep-alive
+  accept = application/json, text/plain, */*
+  bearer = Bearer sithivilisbbebt
+  authorization = Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyMyIsInNjb3BlcyI6W3siYXV0aG9yaXR5IjoiUk9MRV9BRE1JTiJ9XSwiaXNzIjoiaHR0cDovL2RldmdsYW4uY29tIiwiaWF0IjoxNTg1NjAwMDU3LCJleHAiOjE1ODY0NjQwNTd9.gRqF1S6jdGwUeJn6WpgaNOwwjlb0W8UUVrAGKjNGcXk
+  sec-fetch-dest = empty
+  user-agent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36
+  origin = http://localhost:8100
+  sec-fetch-site = same-site
+  sec-fetch-mode = cors
+  referer = http://localhost:8100/
+  accept-encoding = gzip, deflate, br
+  accept-language = en-US,en;q=0.9
+
+2020-03-31 02:00:28,835 INFO com.skepseis.service.impl.UserServiceImpl [http-nio-8083-exec-8] Requested user details: {"id"=18,"username"="vol5","password"="fRj7kSXeNu7QpLQLgR2VTQ==","image"="https://cdn3.iconfinder.com/data/icons/business-avatar-1/512/7_avatar-512.png"}
+2020-03-31 02:00:30,275 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-10] couldn't find bearer string, will ignore the header
+2020-03-31 02:02:17,821 WARN com.skepseis.service.security.JwtAuthenticationFilter [http-nio-8083-exec-1] couldn't find bearer string, will ignore the header

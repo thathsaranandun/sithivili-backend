@@ -6,20 +6,23 @@ import com.skepseis.demo.helper.AuthorizationHelper;
 import com.skepseis.model.Client;
 import com.skepseis.model.User;
 import com.skepseis.model.Volunteer;
+import com.skepseis.service.impl.EmailServiceImpl;
 import com.skepseis.service.impl.UserServiceImpl;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.Authorization;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.util.List;
 import java.util.Map;
 
 
 @RestController
+@Slf4j
 @RequestMapping("/api/users")
 public class UserController {
 
@@ -32,6 +35,8 @@ public class UserController {
     @Autowired
     UserServiceImpl userService;
 
+    @Autowired
+    EmailServiceImpl emailService;
 
     /**
      * Get all Users
@@ -141,10 +146,26 @@ public class UserController {
         return true;
     }
 
-    @GetMapping("test2")
-    public boolean resetEmailConfirm(@PathVariable(value = "username") int username){
-        return true;
+    @PostMapping(Path.PASSWORD_RESET_EMAIL)
+    public boolean sendPwdResetEmail(@Valid @RequestBody String email,@RequestHeader Map<String, String> bearer){
+        authorizationHelper.authorizeHeader(bearer);
+        return userService.sendPasswordResetEmail(email);
     }
+
+    @GetMapping(Path.USER_VERIFY)
+    public void verifyUser(@RequestParam(value = "username") String username, HttpServletResponse httpServletResponse){
+        userService.verifyUser(username);
+        httpServletResponse.setHeader("Location", "http://google.com");
+        httpServletResponse.setStatus(302);
+    }
+
+    @GetMapping(Path.LOG_OUT)
+    public boolean logout(@PathVariable(value = "id") Integer userId,@RequestHeader Map<String, String> bearer) {
+        authorizationHelper.authorizeHeader(bearer);
+        return userService.logout(userId);
+    }
+
+
 
 
 }

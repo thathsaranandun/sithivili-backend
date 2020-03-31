@@ -4,12 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.skepseis.model.helper.AES;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-<<<<<<< Updated upstream:src/main/java/com/example/demo/model/User.java
-import org.springframework.web.bind.annotation.ModelAttribute;
-=======
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
->>>>>>> Stashed changes:sithivili-model/src/main/java/com/skepseis/model/User.java
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -30,6 +26,8 @@ public class User implements Serializable {
     private String password;
     private String usertype;
     private String image;
+    private Boolean loginFlag;
+    private Boolean isVerified;
 
     @Transient
     private final String SECRET_KEY = "sthvl@sk";
@@ -85,6 +83,22 @@ public class User implements Serializable {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public Boolean getLoginFlag() {
+        return loginFlag;
+    }
+
+    public void setLoginFlag(Boolean loginFlag) {
+        this.loginFlag = loginFlag;
+    }
+
+    public Boolean isVerified() {
+        return isVerified;
+    }
+
+    public void setVerified(Boolean verified) {
+        isVerified = verified;
     }
 
     @Override

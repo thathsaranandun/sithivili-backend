@@ -11,7 +11,7 @@ CREATE TABLE `user_account_details` (
   `username` varchar(255) DEFAULT NULL,
   `usertype` varchar(255) DEFAULT NULL,
   `dtype` varchar(31) NOT NULL,
-  `mobile` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `gender` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -5,6 +5,7 @@ import com.skepseis.model.Admin;
 import com.skepseis.model.Client;
 import com.skepseis.model.User;
 import com.skepseis.model.Volunteer;
+import com.skepseis.service.repos.ClientRepository;
 import com.skepseis.service.repos.UserRepository;
 import com.skepseis.model.response.LoginResponse;
 import com.skepseis.model.response.SignUpResponse;
@@ -15,6 +16,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.ModelMap;
 
 import java.util.List;
 
@@ -26,10 +28,22 @@ public class UserServiceImpl implements UserService {
     UserRepository users;
 
     @Autowired
+    ClientRepository clientRepository;
+
+    @Autowired
     JwtTokenUtil jwtTokenUtil;
+
+    @Autowired
+    EmailServiceImpl emailService;
 
     @Value("${jwt.enabled}")
     private boolean isJwtEnabled;
+
+    @Value("${user.verify.link}")
+    private String verifyLink;
+
+    @Value("${user.pwd.reset.link}")
+    private String resetPwdLink;
 
     private final String USER_TYPE_CLIENT = "Client";
     private final String USER_TYPE_VOL = "Volunteer";
@@ -46,18 +60,30 @@ public class UserServiceImpl implements UserService {
         String msg;
         user.setUsertype(USER_TYPE_CLIENT);
         log.info("User details received: {} ", user.toString());
-        if (user.getMobile().equals("") || user.getUsername().equals("") || user.getPassword().equals("")) {
+        if (user.getEmail().equals("") || user.getUsername().equals("") || user.getPassword().equals("")) {
             msg = "Sign Up Failed. Please enter all details.";
         } else {
-            Client existingUser = (Client) users.findByUsernameAndUsertype(user.getUsername(), USER_TYPE_CLIENT);
-            log.info("Username already exist? {}",existingUser != null);
-            if (existingUser == null) { //Success instance
-                log.info("Creating new user...");
-                msg = "Registration successful!";
-                users.save(user);
-            } else {
-                msg = "Username already in use. Please use a different username";
-                log.info("Username already exists.");
+            Client emailClient = clientRepository.findByEmail(user.getEmail());
+            if(null != emailClient){
+                msg = "Email already registered. Please sign up using a different email address ";
+                log.info("Email already exists.");
+            }else {
+                Client existingUser = (Client) users.findByUsernameAndUsertype(user.getUsername(), USER_TYPE_CLIENT);
+                log.info("Username already exist? {}", existingUser != null);
+                if (existingUser == null) { //Success instance
+                    log.info("Creating new user...");
+                    msg = "Registration successful!";
+                    user.setVerified(false);
+                    users.save(user);
+                    ModelMap map = new ModelMap();
+                    map.addAttribute("username", user.getUsername());
+                    String link = verifyLink + "?username=" + user.getUsername();
+                    map.addAttribute("link", link);
+                    emailService.sendEmail(user.getEmail(), map, "user-verify-template");
+                } else {
+                    msg = "Username already in use. Please use a different username";
+                    log.info("Username already exists.");
+                }
             }
 
         }
@@ -84,9 +110,9 @@ public class UserServiceImpl implements UserService {
             log.info("Updated password");
             user.setPassword(userDetails.getPassword());
         }
-        if (userDetails.getMobile() != null) {
-            log.info("Updated mobile");
-            user.setMobile(userDetails.getMobile());
+        if (userDetails.getEmail() != null) {
+            log.info("Updated email");
+            user.setEmail(userDetails.getEmail());
         }
 
         User updatedUser = users.save(user);
@@ -107,6 +133,8 @@ public class UserServiceImpl implements UserService {
 
         User foundUser = users.findByUsernameAndPassword(user.getUsername(),user.getPassword());
         if(null != foundUser){
+            foundUser.setLoginFlag(true);
+            users.save(foundUser);
             response.setUser(foundUser);
             response.getUser().setPassword(null);
             response.setDbdata(true);
@@ -166,12 +194,52 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean sendPasswordResetEmail(String email) {
-        return false;
+        Client user = clientRepository.findByEmail(email);
+        ModelMap map = new ModelMap();
+        if(null == user){
+            return false;
+        }
+        map.addAttribute("username",user.getUsername());
+        String link = resetPwdLink+"?username="+user.getUsername();
+        map.addAttribute("link",link);
+        try{
+            emailService.sendEmail(user.getEmail(),map,"password-reset-template");
+            return true;
+        }catch (Exception e){
+            log.error("Exception occurred", e);
+            return false;
+        }
     }
 
     @Override
-    public boolean resetPassword(String username) {
-        return false;
+    public boolean resetPassword(String username,String password) {
+        User user = users.findByUsername(username);
+        user.setPassword(password);
+        users.save(user);
+        return true;
+    }
+
+    @Override
+    public void verifyUser(String username) {
+        Client client = (Client) users.findByUsernameAndUsertype(username, USER_TYPE_CLIENT);
+        if(client != null){
+            client.setVerified(true);
+            users.save(client);
+            log.info("Client {} has been verified.",username);
+        }
+
+    }
+
+    @Override
+    public boolean logout(Integer id) {
+        try {
+            User user = users.getOne(id);
+            user.setLoginFlag(false);
+            users.save(user);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
     }
 
 

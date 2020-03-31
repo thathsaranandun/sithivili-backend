@@ -45,5 +45,9 @@ public interface UserService {
 
     boolean sendPasswordResetEmail(String email);
 
-    boolean resetPassword(String username);
+    boolean resetPassword(String username, String password);
+
+    void verifyUser(String username);
+
+    boolean logout(Integer id);
 }
