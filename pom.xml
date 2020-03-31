@@ -33,11 +33,6 @@
         </dependency>
         <dependency>
             <groupId>com.skepseis</groupId>
-            <artifactId>sithivili-cache</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.skepseis</groupId>
             <artifactId>sithivili-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -88,7 +83,6 @@
 
     <modules>
         <module>sithivili-controller</module>
-        <module>sithivili-cache</module>
         <module>sithivili-model</module>
         <module>sithivili-service</module>
     </modules>

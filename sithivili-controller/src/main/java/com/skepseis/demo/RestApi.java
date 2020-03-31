@@ -1,7 +1,5 @@
 package com.skepseis.demo;
 
-import com.skepseis.rocksdb.repo.impl.RocksDBRepositoryImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -26,8 +24,7 @@ import java.util.logging.Logger;
 @PropertySource("classpath:/service.properties")
 public class RestApi {
 
-    @Autowired
-    static RocksDBRepositoryImpl rocksDBRepository;
+
     public static void main(String[] args) {
 
 
