@@ -63,21 +63,27 @@ public class UserServiceImpl implements UserService {
         if (user.getEmail().equals("") || user.getUsername().equals("") || user.getPassword().equals("")) {
             msg = "Sign Up Failed. Please enter all details.";
         } else {
-            Client existingUser = (Client) users.findByUsernameAndUsertype(user.getUsername(), USER_TYPE_CLIENT);
-            log.info("Username already exist? {}",existingUser != null);
-            if (existingUser == null) { //Success instance
-                log.info("Creating new user...");
-                msg = "Registration successful!";
-                user.setVerified(false);
-                users.save(user);
-                ModelMap map = new ModelMap();
-                map.addAttribute("username",user.getUsername());
-                String link = verifyLink+"?username="+user.getUsername();
-                map.addAttribute("link",link);
-                emailService.sendEmail(user.getEmail(),map, "user-verify-template");
-            } else {
-                msg = "Username already in use. Please use a different username";
-                log.info("Username already exists.");
+            Client emailClient = clientRepository.findByEmail(user.getEmail());
+            if(null != emailClient){
+                msg = "Email already registered. Please sign up using a different email address ";
+                log.info("Email already exists.");
+            }else {
+                Client existingUser = (Client) users.findByUsernameAndUsertype(user.getUsername(), USER_TYPE_CLIENT);
+                log.info("Username already exist? {}", existingUser != null);
+                if (existingUser == null) { //Success instance
+                    log.info("Creating new user...");
+                    msg = "Registration successful!";
+                    user.setVerified(false);
+                    users.save(user);
+                    ModelMap map = new ModelMap();
+                    map.addAttribute("username", user.getUsername());
+                    String link = verifyLink + "?username=" + user.getUsername();
+                    map.addAttribute("link", link);
+                    emailService.sendEmail(user.getEmail(), map, "user-verify-template");
+                } else {
+                    msg = "Username already in use. Please use a different username";
+                    log.info("Username already exists.");
+                }
             }
 
         }
