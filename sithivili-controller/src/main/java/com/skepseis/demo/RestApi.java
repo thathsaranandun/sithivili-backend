@@ -10,6 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -22,6 +23,7 @@ import java.util.logging.Logger;
 @ComponentScan(basePackages = { "com.skepseis.*"})
 @EntityScan("com.skepseis.*")
 @PropertySource("classpath:/service.properties")
+@EnableSwagger2
 public class RestApi {
 
 

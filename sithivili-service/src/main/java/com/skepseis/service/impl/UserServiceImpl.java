@@ -1,15 +1,15 @@
 package com.skepseis.service.impl;
 
+import com.skepseis.model.*;
+import com.skepseis.model.helper.AES;
+import com.skepseis.model.request.AddVolunteerRequest;
 import com.skepseis.model.request.PasswordResetRequest;
 import com.skepseis.service.exception.ResourceNotFoundException;
-import com.skepseis.model.Admin;
-import com.skepseis.model.Client;
-import com.skepseis.model.User;
-import com.skepseis.model.Volunteer;
 import com.skepseis.service.repos.ClientRepository;
 import com.skepseis.service.repos.UserRepository;
 import com.skepseis.model.response.LoginResponse;
 import com.skepseis.model.response.SignUpResponse;
+import com.skepseis.service.repos.VolunteerDetailsRepository;
 import com.skepseis.service.security.JwtTokenUtil;
 import com.skepseis.service.UserService;
 import lombok.extern.slf4j.Slf4j;
@@ -36,6 +36,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     EmailServiceImpl emailService;
+
+    @Autowired
+    VolunteerDetailsRepository volunteerDetailsRepository;
 
     @Value("${jwt.enabled}")
     private boolean isJwtEnabled;
@@ -161,22 +164,42 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User registerVolunteer(Volunteer user) {
-        Volunteer existingVolunteer = (Volunteer) users.findByUsernameAndUsertype(user.getUsername(),USER_TYPE_VOL);
-        System.out.println(existingVolunteer);
-        if(existingVolunteer==null){ //Success instance
-            System.out.println("Adding new volunteer...");
-            user.setUsertype(USER_TYPE_VOL);
-            if("male".equals(user.getGender())){
-                user.setImage(MALE_VOLUNTEER_IMG);
+    public boolean registerVolunteer(AddVolunteerRequest addVolunteerRequest) {
+        try {
+            Volunteer existingVolunteer = (Volunteer) users.findByUsernameAndUsertype(addVolunteerRequest.getUsername(),USER_TYPE_VOL);
+            System.out.println(existingVolunteer);
+            if(existingVolunteer==null){ //Success instance
+                Volunteer user = new Volunteer();
+                System.out.println("Adding new volunteer...");
+                user.setUsername(addVolunteerRequest.getUsername());
+                user.setLoginFlag(false);
+                user.setPassword(AES.decrypt(addVolunteerRequest.getPassword(), "sthvl@sk"));
+                user.setUsertype(USER_TYPE_VOL);
+                user.setGender(addVolunteerRequest.getGender());
+                user.setEmail(addVolunteerRequest.getEmail());
+                user.setVerified(true);
+                if("male".equals(addVolunteerRequest.getGender())){
+                    user.setImage(MALE_VOLUNTEER_IMG);
+                }else {
+                    user.setImage(FEMALE_VOLUNTEER_IMG);
+                }
+                users.save(user);
+                VolunteerDetails volunteerDetails = new VolunteerDetails();
+                volunteerDetails.setNic(addVolunteerRequest.getNic());
+                volunteerDetails.setDateOfBirth(addVolunteerRequest.getDateOfBirth());
+                volunteerDetails.setMobile(addVolunteerRequest.getMobile());
+                volunteerDetails.setName(addVolunteerRequest.getName());
+                volunteerDetails.setVolunteer(user);
+                volunteerDetailsRepository.save(volunteerDetails);
             }else {
-                user.setImage(FEMALE_VOLUNTEER_IMG);
+                System.out.println("Username already exists.");
             }
-            users.save(user);
-        }else {
-            System.out.println("Username already exists.");
+            return true;
+        }catch (Exception e){
+            log.error("Exception occurred while adding volunteer - {}",e);
+            return false;
         }
-        return user;
+
     }
 
     @Override

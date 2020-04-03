@@ -28,6 +28,7 @@ public class User implements Serializable {
     private String image;
     private Boolean loginFlag;
     private Boolean isVerified;
+    private String email;
 
     @Transient
     private final String SECRET_KEY = "sthvl@sk";
@@ -101,6 +102,14 @@ public class User implements Serializable {
         isVerified = verified;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return String.format(
@@ -111,4 +120,6 @@ public class User implements Serializable {
                         "\"image\"=\"%s\"}",
                 userid, username, password, image);
     }
+
+
 }

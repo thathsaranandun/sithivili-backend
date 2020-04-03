@@ -5,6 +5,7 @@ import com.skepseis.model.Admin;
 import com.skepseis.model.Client;
 import com.skepseis.model.User;
 import com.skepseis.model.Volunteer;
+import com.skepseis.model.request.AddVolunteerRequest;
 import com.skepseis.model.request.PasswordResetRequest;
 import com.skepseis.model.response.LoginResponse;
 import com.skepseis.model.response.SignUpResponse;
@@ -39,7 +40,7 @@ public interface UserService {
     Volunteer getVolunteer(int userId);
 
     /* Register new volunteer (Admin function)*/
-    User registerVolunteer(Volunteer user);
+    boolean registerVolunteer(AddVolunteerRequest user);
 
     /* Register new admin (Admin function)*/
     Admin registerAdmin(Admin user);

@@ -3,6 +3,7 @@ package com.skepseis.demo.controllers;
 import com.skepseis.model.Admin;
 import com.skepseis.model.User;
 import com.skepseis.model.Volunteer;
+import com.skepseis.model.request.AddVolunteerRequest;
 import com.skepseis.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,12 +23,12 @@ public class AdminController {
 
     /**
      * Create new volunteer
-     * @param user
-     * @return User
+     * @param addVolunteerRequest
+     * @return boolean
      */
     @PostMapping(value = Path.NEW_VOLUNTEER)
-    public User addVolunteer(@Valid @RequestBody Volunteer user){
-        return userService.registerVolunteer(user);
+    public boolean addVolunteer(@Valid @RequestBody AddVolunteerRequest addVolunteerRequest){
+        return userService.registerVolunteer(addVolunteerRequest);
     }
 
     /**
