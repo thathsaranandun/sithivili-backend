@@ -1,5 +1,6 @@
 package com.skepseis.demo.controllers;
 
+import com.skepseis.model.request.PasswordResetRequest;
 import com.skepseis.model.response.LoginResponse;
 import com.skepseis.model.response.SignUpResponse;
 import com.skepseis.demo.helper.AuthorizationHelper;
@@ -140,10 +141,9 @@ public class UserController {
         return userService.getVolunteer(userId);
     }
 
-    @GetMapping("test1")
-    public boolean resetPassword(@PathVariable(value = "email") int email,@RequestHeader Map<String, String> bearer){
-        authorizationHelper.authorizeHeader(bearer);
-        return true;
+    @PostMapping(Path.PASSWORD_RESET)
+    public boolean resetPassword(@Valid @RequestBody PasswordResetRequest passwordResetRequest){
+        return userService.resetPassword(passwordResetRequest);
     }
 
     @PostMapping(Path.PASSWORD_RESET_EMAIL)

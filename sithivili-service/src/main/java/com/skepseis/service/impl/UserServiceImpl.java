@@ -1,5 +1,6 @@
 package com.skepseis.service.impl;
 
+import com.skepseis.model.request.PasswordResetRequest;
 import com.skepseis.service.exception.ResourceNotFoundException;
 import com.skepseis.model.Admin;
 import com.skepseis.model.Client;
@@ -212,11 +213,15 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean resetPassword(String username,String password) {
-        User user = users.findByUsername(username);
-        user.setPassword(password);
-        users.save(user);
-        return true;
+    public boolean resetPassword(PasswordResetRequest passwordResetRequest) {
+        try {
+            User user = users.findByUsername(passwordResetRequest.getUsername());
+            user.setPassword(passwordResetRequest.getUsername());
+            users.save(user);
+            return true;
+        }catch (Exception e){
+            return false;
+        }
     }
 
     @Override

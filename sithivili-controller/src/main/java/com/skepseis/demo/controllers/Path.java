@@ -43,4 +43,6 @@ public interface Path {
     String LOG_OUT = "/user/logout/{id}";
 
     String PASSWORD_RESET_EMAIL = "/user/email/reset";
+
+    String PASSWORD_RESET = "reset/password";
 }

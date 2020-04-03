@@ -5,6 +5,7 @@ import com.skepseis.model.Admin;
 import com.skepseis.model.Client;
 import com.skepseis.model.User;
 import com.skepseis.model.Volunteer;
+import com.skepseis.model.request.PasswordResetRequest;
 import com.skepseis.model.response.LoginResponse;
 import com.skepseis.model.response.SignUpResponse;
 import org.springframework.http.ResponseEntity;
@@ -45,7 +46,7 @@ public interface UserService {
 
     boolean sendPasswordResetEmail(String email);
 
-    boolean resetPassword(String username, String password);
+    boolean resetPassword(PasswordResetRequest passwordResetRequest);
 
     void verifyUser(String username);
 
