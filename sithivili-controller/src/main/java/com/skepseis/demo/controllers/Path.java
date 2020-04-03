@@ -44,5 +44,5 @@ public interface Path {
 
     String PASSWORD_RESET_EMAIL = "/user/email/reset";
 
-    String PASSWORD_RESET = "reset/password";
+    String PASSWORD_RESET = "/user/password/reset";
 }

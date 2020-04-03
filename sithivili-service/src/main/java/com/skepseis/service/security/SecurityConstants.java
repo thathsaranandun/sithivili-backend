@@ -26,8 +26,11 @@ public class SecurityConstants {
             //user verification
             "/api/users/user/verify",
 
-            //password reset
+            //password reset email
             "/api/users/user/email/reset",
+
+            //password reset
+            "/api/users/user/user/password/reset",
 
             //logout
             "/api/users/user/logout/**",
