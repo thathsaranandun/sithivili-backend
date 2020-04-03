@@ -30,7 +30,7 @@ public class SecurityConstants {
             "/api/users/user/email/reset",
 
             //password reset
-            "/api/users/user/user/password/reset",
+            "/api/users/user/password/reset",
 
             //logout
             "/api/users/user/logout/**",
