@@ -17,11 +17,7 @@ public class PasswordResetRequest {
     }
 
     public void setUsername(String username) {
-        if(password != null) {
-            this.password = AES.encrypt(password, SECRET_KEY);
-        }else {
-            this.password = null;
-        }
+        this.username = username;
     }
 
     public String getPassword() {
@@ -29,6 +25,10 @@ public class PasswordResetRequest {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        if(password != null) {
+            this.password = AES.encrypt(password, SECRET_KEY);
+        }else {
+            this.password = null;
+        }
     }
 }
