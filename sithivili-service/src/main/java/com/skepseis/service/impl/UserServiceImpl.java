@@ -245,7 +245,8 @@ public class UserServiceImpl implements UserService {
             User user = users.findByUsername(passwordResetRequest.getUsername());
             if(user!=null) {
                 log.info("found user");
-                user.setPassword(passwordResetRequest.getUsername());
+                user.setPwdAlreadyEncrypted(true);
+                user.setPassword(passwordResetRequest.getPassword());
                 users.save(user);
                 return true;
             }else{
