@@ -239,11 +239,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean resetPassword(PasswordResetRequest passwordResetRequest) {
+        log.info("Username - {}",passwordResetRequest.getUsername());
+        log.info("Password - {}",passwordResetRequest.getPassword());
         try {
             User user = users.findByUsername(passwordResetRequest.getUsername());
-            user.setPassword(passwordResetRequest.getUsername());
-            users.save(user);
-            return true;
+            if(user!=null) {
+                log.info("found user");
+                user.setPassword(passwordResetRequest.getUsername());
+                users.save(user);
+                return true;
+            }else{
+                return false;
+            }
         }catch (Exception e){
             return false;
         }

@@ -45,4 +45,8 @@ public interface Path {
     String PASSWORD_RESET_EMAIL = "/user/email/reset";
 
     String PASSWORD_RESET = "/user/password/reset";
+
+    String LATEST_QUOTE = "/latest/quote/get";
+
+    String NEW_QUOTE = "/quote/new";
 }

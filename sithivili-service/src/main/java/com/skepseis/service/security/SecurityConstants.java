@@ -39,7 +39,11 @@ public class SecurityConstants {
             "/api/locations/**",
 
             //admin functions
-            "/api/admin/**"
+            "/api/admin/**",
+
+            //quotes
+            "/api/quotes/quote/new",
+            "/api/quotes/latest/quote/get"
 
 
 
