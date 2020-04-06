@@ -29,6 +29,7 @@ public class User implements Serializable {
     private Boolean loginFlag;
     private Boolean isVerified;
     private String email;
+    private Boolean pwdAlreadyEncrypted = false;
 
     @Transient
     private final String SECRET_KEY = "sthvl@sk";
@@ -56,7 +57,11 @@ public class User implements Serializable {
 
     public void setPassword(String password) {
         if(password != null) {
-            this.password = AES.encrypt(password, SECRET_KEY);
+            if(!this.pwdAlreadyEncrypted) {
+                this.password = AES.encrypt(password, SECRET_KEY);
+            }else {
+                this.password = password;
+            }
         }else {
             this.password = null;
         }
@@ -108,6 +113,14 @@ public class User implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Boolean getPwdAlreadyEncrypted() {
+        return pwdAlreadyEncrypted;
+    }
+
+    public void setPwdAlreadyEncrypted(Boolean pwdAlreadyEncrypted) {
+        this.pwdAlreadyEncrypted = pwdAlreadyEncrypted;
     }
 
     @Override

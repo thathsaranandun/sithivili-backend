@@ -36,7 +36,10 @@ public class SecurityConstants {
             "/api/users/user/logout/**",
 
             //locations
-            "/api/locations/**"
+            "/api/locations/**",
+
+            //admin functions
+            "/api/admin/**"
 
 
 

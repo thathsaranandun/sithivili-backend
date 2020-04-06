@@ -13,6 +13,8 @@ public class VolunteerDetails {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
+
+    @OneToOne
     private Volunteer volunteer;
     private String name;
     private String nic;

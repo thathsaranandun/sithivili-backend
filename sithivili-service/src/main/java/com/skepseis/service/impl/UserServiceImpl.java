@@ -167,13 +167,13 @@ public class UserServiceImpl implements UserService {
     public boolean registerVolunteer(AddVolunteerRequest addVolunteerRequest) {
         try {
             Volunteer existingVolunteer = (Volunteer) users.findByUsernameAndUsertype(addVolunteerRequest.getUsername(),USER_TYPE_VOL);
-            System.out.println(existingVolunteer);
             if(existingVolunteer==null){ //Success instance
                 Volunteer user = new Volunteer();
-                System.out.println("Adding new volunteer...");
+                log.info("Adding new volunteer...");
                 user.setUsername(addVolunteerRequest.getUsername());
                 user.setLoginFlag(false);
-                user.setPassword(AES.decrypt(addVolunteerRequest.getPassword(), "sthvl@sk"));
+                user.setPwdAlreadyEncrypted(true);
+                user.setPassword(addVolunteerRequest.getPassword());
                 user.setUsertype(USER_TYPE_VOL);
                 user.setGender(addVolunteerRequest.getGender());
                 user.setEmail(addVolunteerRequest.getEmail());
@@ -191,8 +191,10 @@ public class UserServiceImpl implements UserService {
                 volunteerDetails.setName(addVolunteerRequest.getName());
                 volunteerDetails.setVolunteer(user);
                 volunteerDetailsRepository.save(volunteerDetails);
+                log.info("Volunteer details recorded successfully");
             }else {
-                System.out.println("Username already exists.");
+                log.error("Username already exists.");
+                return false;
             }
             return true;
         }catch (Exception e){
