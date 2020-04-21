@@ -28,5 +28,5 @@ jobs:
       with:
         app-name: 'sithivili'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_353c1f7ab38c4f7085898f6d4737d067 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e3d8a3be6433431a855a5c203f4e605c }}
         package: '${{ github.workspace }}/target/*.war'
