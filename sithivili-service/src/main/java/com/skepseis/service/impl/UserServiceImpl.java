@@ -101,10 +101,10 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
-    public User updateUser(int userId,Client userDetails){
-        log.info("Received update request for user {}",userId);
-        Client user = (Client) users.findById(userId).
-                orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
+    public User updateUser(Client userDetails){
+        log.info("Received update request for user {}",userDetails.getUserid());
+        Client user = (Client) users.findById(userDetails.getUserid()).
+                orElseThrow(() -> new ResourceNotFoundException("User", "id", userDetails.getUserid()));
 
         if (userDetails.getUsername() != null) {
             log.info("Updated username");
@@ -226,7 +226,7 @@ public class UserServiceImpl implements UserService {
             return false;
         }
         map.addAttribute("username",user.getUsername());
-        String link = resetPwdLink+"?username="+user.getUsername();
+        String link = resetPwdLink+user.getUsername();
         map.addAttribute("link",link);
         try{
             emailService.sendEmail(user.getEmail(),map,"password-reset-template");

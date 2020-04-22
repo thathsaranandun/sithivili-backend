@@ -11,7 +11,7 @@ public interface Path {
     String USER = "/user/{id}";
 
     //Update user
-    String UPDATE_USER = "/user/update/{id}";
+    String UPDATE_USER = "/user/update";
 
     //Delete user
     String DELETE_USER = "/user/delete/{id}";

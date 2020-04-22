@@ -80,17 +80,14 @@ public class UserController {
 
     /**
      * Update User
-     * @param userId
      * @param userDetails
      * @param bearer
      * @return User
      */
-    @PutMapping(path = Path.UPDATE_USER,consumes={MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE} )
-    public User updateUser(@PathVariable(value = "id") int userId,
-                           @Valid @RequestBody Client userDetails,@RequestHeader Map<String, String> bearer) {
+    @PostMapping(path = Path.UPDATE_USER)
+    public User updateUser(@Valid @RequestBody Client userDetails,@RequestHeader Map<String, String> bearer) {
         authorizationHelper.authorizeHeader(bearer);
-        return userService.updateUser(userId,userDetails);
+        return userService.updateUser(userDetails);
     }
 
 
@@ -155,7 +152,7 @@ public class UserController {
     @GetMapping(Path.USER_VERIFY)
     public void verifyUser(@RequestParam(value = "username") String username, HttpServletResponse httpServletResponse){
         userService.verifyUser(username);
-        httpServletResponse.setHeader("Location", "http://google.com");
+        httpServletResponse.setHeader("Location", "https://project-sithivili.herokuapp.com/thank-you");
         httpServletResponse.setStatus(302);
     }
 

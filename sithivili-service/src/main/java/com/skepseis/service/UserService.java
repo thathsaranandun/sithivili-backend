@@ -25,7 +25,7 @@ public interface UserService {
     User getUser(int userId);
 
     /* Update user details */
-    User updateUser(int userId,Client userDetails);
+    User updateUser(Client userDetails);
 
     /* Delete user */
     ResponseEntity<?> removeUser(int userId);
